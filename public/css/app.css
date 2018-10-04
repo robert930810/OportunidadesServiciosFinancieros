@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed|Barlow+Semi+Condensed);
+
+/* Preheader */
+body{
+	font-family: 'Barlow';
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus, a:visited{
+	text-decoration: none !important;
+}
+
+.resetCol{
+	padding:0 !important;
+}
+
+.resetRow{
+	margin: 0 !important;
+}
+
+.borderLeftItems{
+	border-right: 1px solid black;
+}
+
+.container-itemsPreHeader{
+	padding-top: 10px;
+}
+
+.preHeader-item{
+	color: black !important;
+	font-size: 13px;
+	font-weight: bold;
+	height: 25px;
+	padding: 5px 25px 0 25px !important;
+}
+
+/* Header */
+
+#header{
+	margin-top: 10px;
+	position: relative;
+}
+
+.header-menu{
+	height: 100%;
+	padding: 0 !important;
+}
+
+.header-containerItems{
+	height: 100%;
+}
+
+.header-containerLogo{
+	background: #f5f4fe;
+	padding: 5px 0 5px 30px;
+}
+
+.header-menu{
+	width: 100%;
+}
+
+.header-item{
+	position: relative;
+	color: black !important;
+	display: block;
+	text-align: center;
+	width: 20%;
+}
+
+.header-textoItem{
+	color: white;
+	display: inline-block;
+	font-size: 13px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.header-item1{
+	background: #1d84c3;
+}
+.header-item2{
+	background: #ec2d35;
+}
+.header-item3{
+	background: #fdbf3c;
+}
+.header-item4{
+	background: #2aace0;
+}
+.header-item5{
+	background: #3fcf64;
+}
+
+.header-menu:before{
+	background: #1d84c3;
+	content: "";
+	height: 79px;
+	position: absolute;
+	top: 0;
+	left: -23px;
+	transform: skew(336deg);
+	width: 40px;
+	z-index: 2;
+}
+
+/* Footer */
+
+#footer{
+	background: #1d84c3;
+	padding: 20px 0 100px;
+}
+
+.footer-contianerLogo{
+	text-align: center;
+}
+
+.footer-title{
+	color: white;
+	font-size: 25px;
+	font-weight: normal;
+	position: relative;
+}
+
+.footer-contianerTelefonos{
+    margin-bottom: 35px;
+	margin-left: 20%;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-contianerNosotros{
+	margin-left: 20%;
+}
+
+.footer-textTelefonos{
+	color: #fff;
+	line-height: 20px;
+	padding-left: 45px;
+}
+
+.footer-textTelefonosNal{
+	font-weight: bold;
+}
+
+.footer-imgNosotros{
+	position: absolute;
+	top: 5px;
+}
+
+.footer-title:after{
+    background: #fff;
+    border-radius: 70px;
+    bottom: -14px;
+    content: "";
+    height: 4px;
+    left: 39%;
+    position: absolute;
+    width: 21%;
+}
+
+.footer-containerServicioCliente{
+	border-left: 1px solid #77b5db;
+	border-right: 1px solid #77b5db;
+}
+
+.footer-menu{
+	color: #fff;
+	margin-left: 25%;
+	padding: 135px 0;
+}
+
+.footer-menuNosotros{
+	color: #fff;
+}
+
+.footer-menuItem{
+	color: #fff;
+}
+
+.footer-menu > li, .footer-menuNosotros > li{
+	font-size: 13px;
+}
+
+.footer-containerNewsletter{
+	padding: 0 10%;
+}
+
+.footer-titleNewsLetter{
+	color: #fff;
+}
