@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
+    <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <body>
         <div id="preHeader">
             <div class="container-itemsPreHeader">
@@ -132,5 +136,17 @@
                 }
             ]
         });
+
+        $(document).ready(function ($) {
+
+        $('#contentarea').contentbuilder({
+            snippetFile: 'editor/assets/minimalist-basic/snippets.html',
+            snippetOpen: true,
+            toolbar: 'left',
+            iconselect: 'editor/assets/ionicons/selecticon.html'  
+        });
+
+    });
+
     </script>
 </html>
