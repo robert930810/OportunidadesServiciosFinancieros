@@ -109,6 +109,12 @@ a:hover, a:active, a:focus, a:visited{
 	z-index: 2;
 }
 
+/* Slider */
+.containImg{
+	position: relative;
+}
+
+
 /* Footer */
 
 #footer{
