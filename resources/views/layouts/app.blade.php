@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<body>
 		<div id="preHeader">
 			<div class="container-itemsPreHeader">
@@ -101,4 +103,21 @@
 
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript">
+		$('#sliderPrincipal').slick({
+			autoplay: true,
+			autoplaySpeed: 15000,
+			nextArrow: '<i class="fa fa-chevron-left slideNext"></i>',
+			prevArrow: '<i class="fa fa-chevron-right slidePrev"></i>',
+			responsive: [
+				{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					}
+				}
+			]
+		});
+	</script>
 </html>
