@@ -15,6 +15,19 @@
                 <a class="preHeader-item  borderLeftItems" href="#">Oficinas</a>
                 <a class="preHeader-item  borderLeftItems" href="#">01 8000 517793 o 307 3029 en Bogotá</a>
                 <a class="preHeader-item " href="#">* Aplican condiciones y restricciones</a>
+
+                @auth
+                    <div class="logoutButton">
+                         <a class="dropdown-item" href="{{ route('logout') }}" 
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>                                
+                    </div>
+                @endauth
+
             </div>
         </div>
 

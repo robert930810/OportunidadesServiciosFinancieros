@@ -109,6 +109,15 @@ a:hover, a:active, a:focus, a:visited{
 	z-index: 2;
 }
 
+.logoutButton{
+	 position: relative;
+    float: right;
+    color: black !important;
+    font-size: 13px;
+    font-weight: bold !important;
+    height: 25px;
+}
+
 /* Slider */
 #sliderPrincipal{
 	position: relative;
