@@ -1,8 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+    
+    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
+
+    
 
     <div id="contentarea" class="is-container container">
+        <div class="ui-draggable"><div class="row clearfix">
+        <div class="column full" contenteditable="true">
+            <div class="center">
+                <i class="icon ion-leaf size-48"></i>
+                <h1 style="font-size: 1.3em">BEAUTIFUL CONTENT</h1>
+                <div class="display">
+                    <h1>LOREM IPSUM IS SIMPLY DUMMY TEXT</h1>
+                </div>
+            </div>
+        </div>
+    </div><div class="row-tool" style="display: none;"><div class="row-handle ui-sortable-handle"><i class="cb-icon-move"></i></div><div class="row-html"><i class="cb-icon-code"></i></div><div class="row-copy"><i class="cb-icon-plus"></i></div><div class="row-remove"><i class="cb-icon-cancel"></i></div></div></div>
 
     <!-- This is just a sample existing content (content can be loaded from a database) -->
         <div class="row clearfix">
@@ -32,28 +47,30 @@
 
     </div>
 
+    <script src="editor/contentbuilder/jquery.min.js" type="text/javascript"></script>
+    <script src="editor/contentbuilder/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
+   
 
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif                               
+     <script type="text/javascript">
+        
+    jQuery(document).ready(function ($) {
 
-                        <div>   
-                            <a href="#" class="button button-default">Administrador de contenido</a>
-                        </div>                
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        $("#contentarea").contentbuilder({
+            snippetFile: "{{ asset('assets/minimalist-basic/snippets.html')}}",
+            snippetOpen: false,
+            toolbar: 'left',
+            iconselect: "{{ asset('assets/ionicons/selecticon.html')}}"
+        });
+
+    });
+
+    function view() {
+        /* This is how to get the HTML (for saving into a database) */
+        var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
+    }
+
+    </script>
 
 @endsection

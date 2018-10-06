@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
-    <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
+    <link href="editor/contentbuilder/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    
 
     <body>
         <div id="preHeader">
@@ -117,10 +119,35 @@
                 </div>
             </div>
         </div>
+        <script src="editor/contentbuilder/jquery.min.js" type="text/javascript"></script>
+        <script src="editor/contentbuilder/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
+        <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
+   
+
+        <script type="text/javascript">
+        
+            jQuery(document).ready(function ($) {
+
+            $("#contentarea").contentbuilder({
+                snippetFile: "{{ asset('assets/minimalist-basic/snippets.html')}}",
+                snippetOpen: false,
+                toolbar: 'left',
+                iconselect: "{{ asset('assets/ionicons/selecticon.html')}}"
+            });
+
+            });
+
+             function view() {
+            /* This is how to get the HTML (for saving into a database) */
+             var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
+             }
+
+        </script>
 
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    
+    
     <script type="text/javascript">
         $('#sliderPrincipal').slick({
             autoplay: true,
@@ -137,16 +164,7 @@
             ]
         });
 
-        $(document).ready(function ($) {
-
-        $('#contentarea').contentbuilder({
-            snippetFile: 'editor/assets/minimalist-basic/snippets.html',
-            snippetOpen: true,
-            toolbar: 'left',
-            iconselect: 'editor/assets/ionicons/selecticon.html'  
-        });
-
-    });
+        
 
     </script>
 </html>
