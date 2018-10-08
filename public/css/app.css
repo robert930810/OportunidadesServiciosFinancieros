@@ -239,7 +239,60 @@ a:hover, a:active, a:focus, a:visited{
 	width: 35%;
 }
 
+/* Video */
 
+#video{
+	background: url("../images/video-fondo.jpg");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	padding: 50px 0 150px 0;
+	position: relative;
+}
+
+.video-title{
+	color: #3c9cd8;
+	font-family: 'Barlow Condensed', sans-serif;
+	margin-bottom: 120px;
+	text-align: center;
+	text-shadow: -1px 0px 15px rgba(60, 156, 216, 0.6);
+	position: relative;
+}
+
+.video-title:after {
+    background: #3c9cd8;
+    border-radius: 70px;
+    bottom: -14px;
+    content: "";
+    height: 4px;
+    left: 42%;
+    position: absolute;
+    width: 17%;
+    -webkit-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    -moz-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+}
+
+.video-botonPlay{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 96px;
+}
+
+.video-containText{
+	padding-left: 80px;
+}
+
+.video-img{
+	margin-right: 10px;
+	width: 40px;
+}
+
+.video-text{
+	color: #3c9cd8;
+	text-shadow: -1px 0px 15px rgba(60, 156, 216, 0.6);
+}
 
 /* Footer */
 

@@ -77,4 +77,27 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="video">
+		<h3 class="video-title">En Oportunidades tenemos todo para ti</h3>
+		<img src="images/video-botonPlay.png" alt="Ver Vídeo" class="img-fluid video-botonPlay">
+		<div class="col-12 col-sm-12 col-lg-4 video-containText">
+			<p>
+				<img src="images/video-ubicacionIcon.png" alt="" class="img-fluid video-img">
+				<span class="video-text">46 Almacenes respaldan su compra.</span>
+			</p>
+			<p>
+				<img src="images/video-antiguedadIcon.png" alt="" class="img-fluid video-img">
+				<span class="video-text">49 años de servicio.</span>
+			</p>
+			<p>
+				<img src="images/video-electrodomesticosIcon.png" alt="" class="img-fluid video-img">
+				<span class="video-text">Líder en electrodomésticos.</span>
+			</p>
+			<p>
+				<img src="images/video-descuentosIcon.png" alt="" class="img-fluid video-img">
+				<span class="video-text">Los mejores descuentos.</span>
+			</p>
+		</div>
+	</div>
 @endsection
