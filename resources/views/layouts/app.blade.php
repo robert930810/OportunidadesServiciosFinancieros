@@ -11,6 +11,7 @@
     <link href="editor/contentbuilder/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" /> 
 
     
 

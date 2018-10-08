@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
-    
-    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
-
-    
+@section('content')    
 
     <div id="contentarea" class="is-container container">
         <div class="ui-draggable"><div class="row clearfix">
@@ -46,12 +42,5 @@
         </div>
 
     </div>
-
-    <script src="editor/contentbuilder/jquery.min.js" type="text/javascript"></script>
-    <script src="editor/contentbuilder/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
-
-   
-
-   
+      
 @endsection
