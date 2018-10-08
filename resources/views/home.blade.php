@@ -53,24 +53,5 @@
 
    
 
-     <script type="text/javascript">
-        
-    jQuery(document).ready(function ($) {
-
-        $("#contentarea").contentbuilder({
-            snippetFile: "{{ asset('assets/minimalist-basic/snippets.html')}}",
-            snippetOpen: false,
-            toolbar: 'left',
-            iconselect: "{{ asset('assets/ionicons/selecticon.html')}}"
-        });
-
-    });
-
-    function view() {
-        /* This is how to get the HTML (for saving into a database) */
-        var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
-    }
-
-    </script>
-
+   
 @endsection

@@ -119,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <script src="editor/contentbuilder/jquery.min.js" type="text/javascript"></script>
+        
         <script src="editor/contentbuilder/jquery-ui.min.js" type="text/javascript"></script>
         <script src="editor/contentbuilder/contentbuilder.js" type="text/javascript"></script>
         <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
@@ -130,10 +130,10 @@
             jQuery(document).ready(function ($) {
 
             $("#contentarea").contentbuilder({
-                snippetFile: "{{ asset('assets/minimalist-basic/snippets.html')}}",
+                snippetFile: "editor/assets/minimalist-basic/snippets.html",
                 snippetOpen: false,
                 toolbar: 'left',
-                iconselect: "{{ asset('assets/ionicons/selecticon.html')}}"
+                iconselect: "editor/assets/ionicons/selecticon.html"
             });
 
             });
