@@ -25,25 +25,6 @@ class PageController extends Controller
         return view('pages.create');
     }
 
-    public function store(Request $request)
-    {
-    	$page= new Page;
-        
-    	 request()->validate([
-            'name' => 'required',
-            'description' => 'required',
-        ]);
-
-        $page->name=$request->get('name');
-        $page->description=$request->get('description');
- 
-        //save data into database
-        $page->save();
- 
-        //redirect to post index page
-        return redirect()->route('pages.index')
-                        ->with('success','page add successfully.');
-    }
  
  	public function store(Request $request){
 
@@ -64,18 +45,31 @@ class PageController extends Controller
 
  	public function edit($id){
  		$page = Page::find($id);
-        return view('pages.edit',compact('page','id'));
+        return view('pages.edit',compact('page'));
  	}
 
  	public function update(Request $request, $id)
     {
-        $page= Page::find($id);
+        $page = Page::find($id);
         $page->name=$request->get('name');
-        $page->email=$request->get('description');
-        $page->number=$request->get('content');
-        $page->office=$request->get('url');
+        $page->description=$request->get('description');
+        $page->content=$request->get('content');
+        $page->url=$request->get('url');
         $page->save();
         return redirect()->route('pages.index')->with('Success','Page updated successfully');
+    }
+
+    public function show($id)
+    {
+        $page=Page::find($id);
+        return  view('pages.show',compact('page'));
+    }
+
+    public function destroy($id)
+    {
+        
+        Page::find($id)->delete();
+        return redirect()->route('pages.index')->with('success','page deleted seccesfully');
     }
     
 }
