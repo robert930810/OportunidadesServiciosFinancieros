@@ -25,5 +25,37 @@ class PageController extends Controller
         return view('pages.create');
     }
  
+ 	public function store(Request $request){
+
+ 		request()->validate([
+ 			'name'=>'required',
+ 			'description'=>'required',
+ 		]);
+
+ 		$page= new Page;
+
+ 		$page->name=$request->get('name');
+ 		$page->description=$request->get('description');
+
+ 		$page->save();
+
+ 		return redirect()->route('pages.index')->with('success','Page add successfully');
+ 	}
+
+ 	public function edit($id){
+ 		$page = Page::find($id);
+        return view('pages.edit',compact('page','id'));
+ 	}
+
+ 	public function update(Request $request, $id)
+    {
+        $page= Page::find($id);
+        $page->name=$request->get('name');
+        $page->email=$request->get('description');
+        $page->number=$request->get('content');
+        $page->office=$request->get('url');
+        $page->save();
+        return redirect()->route('pages.index')->with('Success','Page updated successfully');
+    }
     
 }

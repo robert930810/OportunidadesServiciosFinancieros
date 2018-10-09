@@ -17,11 +17,11 @@
         {{ csrf_field() }}
         <div class="form-group">
             <label>Page name</label>
-            <input type="text" name="title" class="form-control" placeholder="Page name">
+            <input type="text" name="name" class="form-control" placeholder="Page name">
         </div>
         <div class="form-group">
             <label>Page Description</label>
-            <textarea name="body" rows="4" class="form-control"></textarea>
+            <textarea name="description" rows="4" class="form-control"></textarea>
         </div>
         <a href="{{ route('pages.index') }}" class="btn btn-default">Cancel</a>
         <button type="submit" class="btn btn-primary">Submit</button>

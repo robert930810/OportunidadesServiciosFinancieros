@@ -8,7 +8,7 @@ class Page extends Model
 {
     protected $table = 'pages';
  
-    //protected $timestamp = false; remove if you want no timestamp on table
+    public $timestamps = false;
  
     protected $fillable = ['name', 'description','content'];
 }

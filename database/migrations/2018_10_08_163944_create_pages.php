@@ -15,12 +15,12 @@ class CreatePages extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('idUser');
-            $table->integer('idCategory');
-            $table->string('description');
-            $table->string('content');
-            $table->string('url')->unique();
+            $table->string('name')->nullable();
+            $table->integer('idUser')->nullable()->unsigned();
+            $table->integer('idCategory')->nullable();
+            $table->string('description')->nullable();
+            $table->string('content')->nullable();
+            $table->string('url')->unique()->nullable();
         });
 
         Schema::table('pages',function(Blueprint $table){
