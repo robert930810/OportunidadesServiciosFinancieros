@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed|Barlow+Semi+Condensed);body{font-family:'Barlow'}
+a{text-decoration:none}a:hover,a:active,a:focus,a:visited{text-decoration:none!important}.resetCol{padding:0!important}.resetRow{margin:0!important}.borderLeftItems{border-right:1px solid black}
+.container-itemsPreHeader{padding-top:10px}.preHeader-item{color:black!important;font-size:13px;font-weight:bold;height:25px;padding:5px 25px 0 25px!important}
+#header{margin-top:10px;position:relative}.header-menu{height:100%;padding:0!important}.header-containerItems{height:100%}.header-containerLogo{background:#f5f4fe;padding:5px 0 5px 30px}
+.header-menu{width:100%}.header-item{position:relative;color:black!important;display:block;text-align:center;width:20%}.header-textoItem{color:white;display:inline-block;font-size:13px;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:100%}
+.header-item1{background:#1d84c3}.header-item2{background:#ec2d35}.header-item3{background:#fdbf3c}.header-item4{background:#2aace0}.header-item5{background:#3fcf64}
+.header-menu:before{background:#1d84c3;content:"";height:79px;position:absolute;top:0;left:-23px;transform:skew(336deg);width:40px;z-index:2}
+.logoutButton{position:relative;float:right;color:black!important;font-size:13px;font-weight:bold!important;height:25px}#sliderPrincipal{position:relative}
+.slidePrev{background:#464645;color:#fff;cursor:pointer;font-size:30px;height:60px;padding:15px 0 0 10px;position:absolute;right:0;text-align:center;top:50%;width:60px;z-index:2}
+.slideNext{background:#464645;color:#fff;cursor:pointer;font-size:30px;height:60px;padding:15px 10px 0 0;position:absolute;left:0;text-align:center;top:50%;width:60px;z-index:2}
+.containImg{position:relative}.sliderPrincipal-containTextBottom{position:absolute}.sliderPrincipal-containTextLeft{color:black;position:absolute;left:5%;top:40%;text-align:-webkit-center}
+.sliderPrincipal-containTextBottom{color:black;position:absolute;left:40%;top:75%;text-align:-webkit-center;font-size:15px}.sliderPrincipal-textSlider{font-size:17px;font-weight:bold;font-family:'Barlow Semi Condensed',sans-serif}
+.sliderPrincipal-titleSlider{font-size:36px}.sliderPrincipal-titleSlider>strong{font-family:'Barlow Condensed',sans-serif}.sliderPrincipal-button{border-radius:40px;display:inline-block;color:white;padding:15px 40px}
+.sliderPrincipal-button:hover,.sliderPrincipal-button:active,.sliderPrincipal-button:focus,.sliderPrincipal-button:visited{color:white}#conoce{padding:40px 0}
+.conoce-title{color:#348dc7;font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:bold;line-height:20px;margin-bottom:60px;position:relative;text-align:center}
+.conoce-title:after{background:#348dc7;border-radius:70px;bottom:-14px;content:"";height:4px;left:45%;position:absolute;width:10%}
+.conoce-TarjetaOportuya{background:#1d84c3}.conoce-creditoMotos{background:#ec2d35}.conoce-creditoLibranza{background:#fdbf3c}.conoce-seguros{background:#2aace0}
+.conoce-viajes{background:#3fcf64}.conoce-titleTarjeta{color:white;font-size:22px;margin:10px 0 20px 0}.conoce-tarjetasTexto{color:white;font-size:12px;font-weight:bold;line-height:13px;margin-top:20px}
+.conoce-titleTarjetaMotos{color:white;font-size:22px;margin:10px 0 54px 0}.conoce-titleTarjetaSeguros{color:white;font-size:22px;margin:10px 0 80px 0}
+.conoce-titleTarjeta>strong,.conoce-titleTarjetaMotos>strong,.conoce-titleTarjetaSeguros>strong{font-family:'Barlow Condensed',sans-serif;font-size:25px}
+.conoce-TarjetaOportuya,.conoce-creditoMotos,.conoce-creditoLibranza,.conoce-seguros,.conoce-viajes{height:100%;padding:0 5px;position:absolute;width:35%}
+#video{background:url("../images/video-fondo.jpg");background-repeat:no-repeat;background-size:cover;padding:50px 0 150px 0;position:relative}
+.video-title{color:#3c9cd8;font-family:'Barlow Condensed',sans-serif;margin-bottom:120px;text-align:center;text-shadow:-1px 0 15px rgba(60,156,216,0.6);position:relative}
+.video-title:after{background:#3c9cd8;border-radius:70px;bottom:-14px;content:"";height:4px;left:42%;position:absolute;width:17%;-webkit-box-shadow:0 2px 26px -1px rgba(60,156,216,1);-moz-box-shadow:0 2px 26px -1px rgba(60,156,216,1);box-shadow:0 2px 26px -1px rgba(60,156,216,1)}
+.video-botonPlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:96px}.video-containText{padding-left:80px}.video-img{margin-right:10px;width:40px}
+.video-text{color:#3c9cd8;text-shadow:-1px 0 15px rgba(60,156,216,0.6)}#convenios{padding:40px 0}.containerConvenios{max-width:1200px;margin:auto}.convenios-title{color:#348dc7;font-size:25px;font-weight:normal;margin-bottom:40px;position:relative}
+.convenios-title:after{background:#348dc7;border-radius:70px;bottom:-6px;content:"";height:4px;left:42%;position:absolute;width:17%;-webkit-box-shadow:0 2px 26px -1px rgba(60,156,216,1);-moz-box-shadow:0 2px 26px -1px rgba(60,156,216,1);box-shadow:0 2px 26px -1px rgba(60,156,216,1)}
+.convenios-title>strong{font-family:'Barlow Condensed',sans-serif}.convenios-text{margin-bottom:40px;padding:0 110px}.convenios-titleInfo{color:#1d84c3;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:bold}
+.convenios-textInfo{line-height:17px;padding:0 50px}.convenios-button{color:#1d84c3;border:1px solid #1d84c3;border-radius:35px;font-family:'Barlow Condensed',sans-serif;font-size:18px;padding:7px 45px;transition:all .3s ease-in-out}
+.convenios-button:hover{background:#1d84c3;color:white}#footer{background:#1d84c3;padding:20px 0 100px}.footer-contianerLogo{text-align:center}.footer-title{color:white;font-size:25px;font-weight:normal;position:relative}
+.footer-title:after{background:#fff;border-radius:70px;bottom:-14px;content:"";height:4px;left:39%;position:absolute;width:21%}
+.footer-contianerTelefonos{margin-bottom:35px;margin-left:20%;margin-top:40px;position:relative}.footer-contianerNosotros{margin-left:20%}.footer-textTelefonos{color:#fff;line-height:20px;padding-left:45px}
+.footer-textTelefonosNal{font-weight:bold}.footer-imgNosotros{position:absolute;top:5px}.footer-containerServicioCliente{border-left:1px solid #77b5db;border-right:1px solid #77b5db}
+.footer-menu{color:#fff;margin-left:25%;padding:135px 0}.footer-menuNosotros{color:#fff}.footer-menuItem{color:#fff}.footer-menu>li,.footer-menuNosotros>li{font-size:13px}
+.footer-containerNewsletter{padding:0 10%}.footer-titleNewsLetter{color:#fff}@media(max-width:1700px){.conoce-TarjetaOportuya,.conoce-creditoMotos,.conoce-creditoLibranza,.conoce-seguros,.conoce-viajes{width:45%}
+.conoce-titleTarjeta{font-size:18px;line-height:20px;margin:10px 0}.conoce-tarjetasTexto{margin-top:10px}.conoce-titleTarjetaMotos{margin:10px 0 20px 0}
+.conoce-titleTarjetaSeguros{margin:10px 0 45px 0}.conoce-titleTarjeta>strong,.conoce-titleTarjetaMotos>strong,.conoce-titleTarjetaSeguros>strong{font-size:20px}
+.conoce-tarjetasTexto{font-size:10px}.conoce-tarjetasImg{width:32px}}@media(max-width:1300px){.conoce-TarjetaOportuya,.conoce-creditoMotos,.conoce-creditoLibranza,.conoce-seguros,.conoce-viajes{width:50%}
+.conoce-titleTarjeta{font-size:15px;line-height:20px;margin:10px 0}.conoce-titleTarjetaMotos{font-size:17px;margin:10px 0 30px 0}.conoce-tarjetasImg{width:24px}
+}@media(max-width:991px){.conoce-TarjetaOportuya,.conoce-creditoMotos,.conoce-creditoLibranza,.conoce-seguros,.conoce-viajes{width:35%}.conoce-containTarjeta{margin-bottom:20px}
+.conoce-titleTarjeta{font-size:35px;line-height:35px;margin:20px 0 50px}.conoce-titleTarjetaMotos{font-size:25px;padding:0 40px;margin:25px 0 30px 0}.conoce-titleTarjetaSeguros{margin:20px 0 45px 0}
+.conoce-titleTarjeta>strong,.conoce-titleTarjetaMotos>strong,.conoce-titleTarjetaSeguros>strong{font-size:25px}.conoce-tarjetasImg{width:48px}.conoce-tarjetasTexto{font-size:15px;line-height:17px;margin-top:70px}
+}@media(max-width:991px){.conoce-TarjetaOportuya,.conoce-creditoMotos,.conoce-creditoLibranza,.conoce-seguros,.conoce-viajes{width:40%}.conoce-titleTarjeta{font-size:25px;line-height:35px;margin:10px 0 30px}
+.conoce-tarjetasTexto{margin-top:20px;font-size:13px}.conoce-titleTarjetaMotos{padding:0}}

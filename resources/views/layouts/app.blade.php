@@ -2,19 +2,17 @@
 <html>
     <head>
         <title>Oportunidades Servicios Financieros - @yield('title')</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link href="{{ asset('editor/contentbuilder/codemirror/lib/codemirror.css')}}" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/slick.min.js')}}"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" /> 
-
-    
-
     <body>
         <div id="preHeader">
             <div class="container-itemsPreHeader">

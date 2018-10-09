@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed|Barlow+Semi+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed|Barlow+Semi+Condensed);
 
 /* Preheader */
 body{
@@ -153,6 +153,52 @@ a:hover, a:active, a:focus, a:visited{
 	z-index: 2;	
 }
 
+.containImg{
+	position: relative;
+}
+
+.sliderPrincipal-containTextLeft{
+	color: black;
+	position: absolute;
+	left: 5%;
+	top: 40%;
+	text-align: -webkit-center;
+}
+
+.sliderPrincipal-containTextBottom{
+	color: black;
+	position: absolute;
+	left: 40%;
+	top: 75%;
+	text-align: -webkit-center;
+	font-size: 15px;
+}
+
+.sliderPrincipal-textSlider{
+	font-size: 17px;
+    font-weight: bold;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.sliderPrincipal-titleSlider{
+	font-size: 36px;
+}
+
+.sliderPrincipal-titleSlider > strong{
+	font-family: 'Barlow Condensed', sans-serif;	
+}
+
+.sliderPrincipal-button{
+	border-radius: 40px;
+	display: inline-block;
+	color: white;
+	padding: 15px 40px;
+}
+
+.sliderPrincipal-button:hover, .sliderPrincipal-button:active, .sliderPrincipal-button:focus, .sliderPrincipal-button:visited{
+	color: white;
+}
+
 /* Conoce */
 
 #conoce{
@@ -181,7 +227,189 @@ a:hover, a:active, a:focus, a:visited{
 	width: 10%;
 }
 
+.conoce-TarjetaOportuya{
+	background: #1d84c3; 
+}
 
+.conoce-creditoMotos{
+	background: #ec2d35;
+}
+
+.conoce-creditoLibranza{
+	background: #fdbf3c;
+}
+
+.conoce-seguros{
+	background: #2aace0;
+}
+
+.conoce-viajes{
+	background: #3fcf64;
+}
+
+.conoce-titleTarjeta{
+	color: white;
+	font-size: 22px;
+	margin: 10px 0 20px 0;
+}
+
+.conoce-tarjetasTexto{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 13px;
+    margin-top: 20px;
+}
+
+.conoce-titleTarjetaMotos{
+	color: white;
+	font-size: 22px;
+	margin: 10px 0 54px 0;
+}
+
+.conoce-titleTarjetaSeguros{
+	color: white;
+	font-size: 22px;
+	margin: 10px 0 80px 0;
+}
+
+.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 25px;
+}
+
+.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+	height: 100%;
+	padding: 0 5px;
+	position: absolute;
+	width: 35%;
+}
+
+/* Video */
+
+#video{
+	background: url("../images/video-fondo.jpg");
+	background-repeat: no-repeat; 
+	background-size: cover;
+	padding: 50px 0 150px 0;
+	position: relative;
+}
+
+.video-title{
+	color: #3c9cd8;
+	font-family: 'Barlow Condensed', sans-serif;
+	margin-bottom: 120px;
+	text-align: center;
+	text-shadow: -1px 0px 15px rgba(60, 156, 216, 0.6);
+	position: relative;
+}
+
+.video-title:after {
+    background: #3c9cd8;
+    border-radius: 70px;
+    bottom: -14px;
+    content: "";
+    height: 4px;
+    left: 42%;
+    position: absolute;
+    width: 17%;
+    -webkit-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    -moz-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+}
+
+.video-botonPlay{
+	cursor: pointer;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	width: 96px;
+}
+
+.video-containText{
+	padding-left: 80px;
+}
+
+.video-img{
+	margin-right: 10px;
+	width: 40px;
+}
+
+.video-text{
+	color: #3c9cd8;
+	text-shadow: -1px 0px 15px rgba(60, 156, 216, 0.6);
+}
+
+/* Convenios */
+
+#convenios{
+	padding: 40px 0;
+}
+
+.containerConvenios{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.convenios-title{
+	color: #348dc7;
+	font-size: 25px;
+	font-weight: normal;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.convenios-title:after {
+    background: #348dc7;
+    border-radius: 70px;
+    bottom: -6px;
+    content: "";
+    height: 4px;
+    left: 42%;
+    position: absolute;
+    width: 17%;
+    -webkit-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    -moz-box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+    box-shadow: 0px 2px 26px -1px rgba(60,156,216,1);
+}
+
+.convenios-title > strong{
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.convenios-text{
+	margin-bottom: 40px;
+	padding: 0 110px;
+}
+
+.convenios-titleInfo{
+	color: #1d84c3;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.convenios-textInfo{
+	line-height: 17px;
+	margin: 10px 0 25px;
+	padding: 0 50px;
+}
+
+.convenios-button{
+	color: #1d84c3;
+	border: 1px solid #1d84c3;
+	border-radius: 35px;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 18px;
+	padding: 7px 45px;
+	transition: all .3s ease-in-out;
+}
+
+.convenios-button:hover{
+	background: #1d84c3;
+	color: white;
+}
 
 /* Footer */
 
@@ -267,4 +495,170 @@ a:hover, a:active, a:focus, a:visited{
 
 .footer-titleNewsLetter{
 	color: #fff;
+}
+
+
+
+/* Media Queries */
+
+@media(max-width: 1700px){
+	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+		width: 45%;
+	}
+
+	.conoce-titleTarjeta{
+		font-size: 18px;
+		line-height: 20px;
+		margin: 10px 0;
+	}
+	.conoce-tarjetasTexto{
+		margin-top: 10px;
+	}
+	.conoce-titleTarjetaMotos{
+		margin: 10px 0 20px 0;
+	}
+	.conoce-titleTarjetaSeguros{
+		margin: 10px 0 45px 0;
+	}
+	.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
+		font-size: 20px;
+	}
+	.conoce-tarjetasTexto{
+		font-size: 10px;
+	}
+	.conoce-tarjetasImg{
+		width: 32px;
+	}
+}
+
+@media(max-width: 1500px){
+	.sliderPrincipal-containTextBottom{
+		top: 60%;
+	}
+}
+
+@media(max-width: 1300px){
+	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+		width: 50%;
+	}
+
+	.conoce-titleTarjeta {
+	    font-size: 15px;
+	    line-height: 20px;
+	    margin: 10px 0;
+	}
+
+	.conoce-titleTarjetaMotos{
+		font-size: 17px;
+		margin: 10px 0 30px 0;
+	}
+
+	.conoce-tarjetasImg{
+		width: 24px;
+	}
+}
+
+@media(max-width: 991px){
+	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+		width: 35%;
+	}
+	.conoce-containTarjeta{
+		margin-bottom: 20px;
+	}
+	.conoce-titleTarjeta{
+		font-size: 35px;
+		line-height: 35px;
+		margin: 20px 0 50px;
+	}
+	.conoce-titleTarjetaMotos{
+		font-size: 25px;
+		padding: 0 40px;
+		margin: 25px 0 30px 0;
+	}
+	.conoce-titleTarjetaSeguros{
+		margin: 20px 0 45px 0;
+	}
+	.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
+		font-size: 25px;
+	}
+	.conoce-tarjetasImg{
+		width: 48px;
+	}
+	.conoce-tarjetasTexto{
+		font-size: 15px;
+		line-height: 17px;
+		margin-top: 70px;
+	}
+	
+	#video{
+		text-align: center;
+	}
+
+	.video-botonPlay{
+		position: inherit;
+		transform: none;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+@media(max-width: 991px){
+	.sliderPrincipal-containTextBottom {
+	    left: 33%;
+	}
+
+	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+		width: 40%;
+	}
+
+	.conoce-titleTarjeta {
+	    font-size: 25px;
+	    line-height: 35px;
+	    margin: 10px 0 30px;
+	}
+
+	.conoce-tarjetasTexto{
+		margin-top: 20px;
+		font-size: 13px;
+	}
+	.conoce-titleTarjetaMotos{
+		padding: 0;
+	}
+
+	.convenios-containInfo{
+		margin-bottom: 60px;
+	}
+}
+
+
+@media(max-width: 768px){
+	.sliderPrincipal-button {
+	    padding: 9px 35px;
+	    font-size: 13px;
+	}
+	.sliderPrincipal-textSlider{
+		font-size: 14px;
+	}
+	.sliderPrincipal-containTextBottom{
+		top: 45%;
+	}
+	.sliderPrincipal-containTextLeft{
+		left: 10%;
+		top: 30%;
+	}
+}
+
+@media(max-width: 500px){
+	.convenios-text{
+		padding: 0 20px;
+	}
+
+	.sliderPrincipal-containTextLeft{
+		position: initial;
+	}
+
+	.sliderPrincipal-containTextBottom{
+		position: initial;
+	}
 }
