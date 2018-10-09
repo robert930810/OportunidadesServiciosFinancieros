@@ -6,15 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
-	public $timestamps = false;
 
-    protected $table = 'pages';
- 
-<<<<<<< HEAD
+    protected $table = 'pages'; 
+
     public $timestamps = false;
  
-=======
->>>>>>> master
     protected $fillable = ['name', 'description','content'];
 
   
