@@ -31,7 +31,7 @@
 	<div id="conoce">
 		<h2 class="conoce-title">Conoce todos los servicios <br> que tenemos para ti</h2>
 		<div class="row resetRow">
-			<div class="col-sm-8 offset-sm-3 col-lg-2 offset-lg-1 conoce-containTarjeta text-center">
+			<div class="col-sm-8 offset-sm-3 col-lg-4 offset-lg-2 col-xl-2 offset-xl-1 conoce-containTarjeta text-center">
 				<div class="conoce-TarjetaOportuya">
 					<h3 class="conoce-titleTarjeta">Tarjeta de <strong>crédito Oportuya</strong></h3>
 					<img src="images/servicios_CreditoOportuyaIcon.png" class="img-fluid conoce-tarjetasImg" alt="">
@@ -41,9 +41,12 @@
 						y muchas cosas más
 					</p>
 				</div>
+				<div class="conoce-containButton">
+					<a href="#" class="conoce-button button-oportuya">Conoce más</a>
+				</div>
 				<img src="images/conoce-oportuyaImagen.png" alt="Conoce nuestra tarjeta OportuYa" class="img-fluid" />
 			</div>
-			<div class="col-sm-8 offset-sm-3 col-lg-2 offset-lg-0 conoce-containTarjeta text-center">
+			<div class="col-sm-8 offset-sm-3 col-lg-4 offset-lg-0 col-xl-2 offset-xl-0 conoce-containTarjeta text-center">
 				<div class="conoce-creditoMotos">
 					<h3 class="conoce-titleTarjetaMotos">Crédito <strong>motos</strong></h3>
 					<img src="images/servicios_motosIcon.png" class="img-fluid conoce-tarjetasImg" alt="">
@@ -53,9 +56,12 @@
 						a rodar tus aventuras
 					</p>
 				</div>
+				<div class="conoce-containButton">
+					<a href="#" class="conoce-button button-creditoMotos">Conoce más</a>
+				</div>
 				<img src="images/conoce-motoImagen.png" alt="Conoce nuestros créditos para motos" class="img-fluid" />
 			</div>
-			<div class="col-sm-8 offset-sm-3 col-lg-2 offset-lg-0 conoce-containTarjeta text-center">
+			<div class="col-sm-8 offset-sm-3 col-lg-4 offset-lg-2 col-xl-2 offset-xl-0 conoce-containTarjeta text-center">
 				<div class="conoce-creditoLibranza">
 					<h3 class="conoce-titleTarjetaMotos">Crédito <strong>libranza</strong></h3>
 					<img src="images/servicios_libranzaIcon.png" class="img-fluid conoce-tarjetasImg" alt="">
@@ -64,9 +70,12 @@
 						de disfrutar la vida!
 					</p>
 				</div>
+				<div class="conoce-containButton">
+					<a href="#" class="conoce-button button-creditoLibranza">Conoce más</a>
+				</div>
 				<img src="images/conoce-libranzaImagen.png" alt="Conoce nuestros créditos de libranza" class="img-fluid" />
 			</div>
-			<div class="col-sm-8 offset-sm-3 col-lg-2 offset-lg-0 conoce-containTarjeta text-center">
+			<div class="col-sm-8 offset-sm-3 col-lg-4 offset-lg-0 col-xl-2 offset-xl-0 conoce-containTarjeta text-center">
 				<div class="conoce-seguros">
 					<h3 class="conoce-titleTarjetaSeguros"><strong>Seguros</strong></h3>
 					<img src="images/servicios_segurosIcon.png" class="img-fluid conoce-tarjetasImg" alt="">
@@ -77,9 +86,12 @@
 						a t​u lado.​​​​​​
 					</p>
 				</div>
+				<div class="conoce-containButton">
+					<a href="#" class="conoce-button button-seguros">Conoce más</a>
+				</div>
 				<img src="images/conoce-segurosImagen.png" alt="Conoce nuestro servicio de seguros" class="img-fluid" />
 			</div>
-			<div class="col-sm-8 offset-sm-3 col-lg-2 offset-lg-0 conoce-containTarjeta text-center">
+			<div class="col-sm-8 offset-sm-3 col-lg-4 offset-lg-0 col-xl-2 offset-xl-0 conoce-containTarjeta tarjetaLAst text-center">
 				<div class="conoce-viajes">
 					<h3 class="conoce-titleTarjetaSeguros"><strong>Viajes</strong></h3>
 					<img src="images/servicios_viajesIcon.png" class="img-fluid conoce-tarjetasImg" alt="">
@@ -89,6 +101,9 @@
 						quienes están 
 						a t​u lado.​​​​​​
 					</p>
+				</div>
+				<div class="conoce-containButton">
+					<a href="#" class="conoce-button button-viajes">Conoce más</a>
 				</div>
 				<img src="images/conoce-viajesImagen.png" alt="Conoce nuestro servicio de viajes" class="img-fluid" />
 			</div>

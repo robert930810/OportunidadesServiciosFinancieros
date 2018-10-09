@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed|Barlow+Semi+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Barlow:200,300,400,500,600,700,800,900);
 
 /* Preheader */
 body{
@@ -176,16 +176,11 @@ a:hover, a:active, a:focus, a:visited{
 
 .sliderPrincipal-textSlider{
 	font-size: 17px;
-    font-weight: bold;
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 400;
 }
 
 .sliderPrincipal-titleSlider{
 	font-size: 36px;
-}
-
-.sliderPrincipal-titleSlider > strong{
-	font-family: 'Barlow Condensed', sans-serif;	
 }
 
 .sliderPrincipal-button{
@@ -207,7 +202,6 @@ a:hover, a:active, a:focus, a:visited{
 
 .conoce-title{
 	color: #348dc7;
-	font-family: 'Barlow Condensed', sans-serif;
 	font-size: 22px;
 	font-weight: bold;
 	line-height: 20px;
@@ -250,13 +244,14 @@ a:hover, a:active, a:focus, a:visited{
 .conoce-titleTarjeta{
 	color: white;
 	font-size: 22px;
+	font-weight: 300;
 	margin: 10px 0 20px 0;
 }
 
 .conoce-tarjetasTexto{
     color: white;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 300;
     line-height: 13px;
     margin-top: 20px;
 }
@@ -264,18 +259,20 @@ a:hover, a:active, a:focus, a:visited{
 .conoce-titleTarjetaMotos{
 	color: white;
 	font-size: 22px;
+	font-weight: 300;
 	margin: 10px 0 54px 0;
 }
 
 .conoce-titleTarjetaSeguros{
 	color: white;
 	font-size: 22px;
+	font-weight: 300;
 	margin: 10px 0 80px 0;
 }
 
 .conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
-	font-family: 'Barlow Condensed', sans-serif;
 	font-size: 25px;
+	font-weight: 500;
 }
 
 .conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
@@ -283,6 +280,43 @@ a:hover, a:active, a:focus, a:visited{
 	padding: 0 5px;
 	position: absolute;
 	width: 35%;
+}
+
+.conoce-containButton{
+	position: absolute;
+	right: 15%;
+	top: 85%;
+}
+
+.conoce-button{
+	border-radius: 20px;
+	color: white;
+	font-size: 13px;
+	padding: 5px 25px;
+}
+
+.conoce-button:hover, .conoce-button:active, .conoce-button:visited, .conoce-button:focus{
+	color: white;
+}
+
+.button-oportuya{
+	background: #1d84c3;
+}
+
+.button-creditoMotos{
+	background: #ec2d35;
+}
+
+.button-creditoLibranza{
+	background: #fdbf3c;
+}
+
+.button-seguros{
+	background: #2aace0;
+}
+
+.button-viajes{
+	background: #3fcf64;
 }
 
 /* Video */
@@ -297,7 +331,6 @@ a:hover, a:active, a:focus, a:visited{
 
 .video-title{
 	color: #3c9cd8;
-	font-family: 'Barlow Condensed', sans-serif;
 	margin-bottom: 120px;
 	text-align: center;
 	text-shadow: -1px 0px 15px rgba(60, 156, 216, 0.6);
@@ -375,7 +408,6 @@ a:hover, a:active, a:focus, a:visited{
 }
 
 .convenios-title > strong{
-	font-family: 'Barlow Condensed', sans-serif;
 }
 
 .convenios-text{
@@ -385,7 +417,6 @@ a:hover, a:active, a:focus, a:visited{
 
 .convenios-titleInfo{
 	color: #1d84c3;
-	font-family: 'Barlow Condensed', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -400,7 +431,6 @@ a:hover, a:active, a:focus, a:visited{
 	color: #1d84c3;
 	border: 1px solid #1d84c3;
 	border-radius: 35px;
-	font-family: 'Barlow Condensed', sans-serif;
 	font-size: 18px;
 	padding: 7px 45px;
 	transition: all .3s ease-in-out;
@@ -485,6 +515,10 @@ a:hover, a:active, a:focus, a:visited{
 	color: #fff;
 }
 
+.footer-menuItem:hover, .footer-menuItem:active, .footer-menuItem:visited, .footer-menuItem:focus{
+	color: #fff; 
+}
+
 .footer-menu > li, .footer-menuNosotros > li{
 	font-size: 13px;
 }
@@ -512,6 +546,7 @@ a:hover, a:active, a:focus, a:visited{
 		margin: 10px 0;
 	}
 	.conoce-tarjetasTexto{
+		font-size: 10px;
 		margin-top: 10px;
 	}
 	.conoce-titleTarjetaMotos{
@@ -523,17 +558,30 @@ a:hover, a:active, a:focus, a:visited{
 	.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
 		font-size: 20px;
 	}
-	.conoce-tarjetasTexto{
-		font-size: 10px;
-	}
 	.conoce-tarjetasImg{
 		width: 32px;
+	}
+	.conoce-containButton{
+		right: 8%;
+	}
+	.conoce-button{
+		font-size: 10px;
 	}
 }
 
 @media(max-width: 1500px){
 	.sliderPrincipal-containTextBottom{
 		top: 60%;
+	}
+}
+
+@media(max-width: 1366px){
+	.conoce-containButton {
+	    right: 8%;
+	}
+
+	.conoce-button{
+		padding: 5px 10px;
 	}
 }
 
@@ -558,13 +606,48 @@ a:hover, a:active, a:focus, a:visited{
 	}
 }
 
-@media(max-width: 991px){
-	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
-		width: 35%;
+@media(max-width: 1200px){
+	.tarjetaLAst{
+		margin: auto;
 	}
 	.conoce-containTarjeta{
 		margin-bottom: 20px;
 	}
+	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
+		width: 35%;
+	}
+	.conoce-tarjetasImg{
+		width: 48px;
+	}
+	.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
+		font-size: 25px;
+	}
+	.conoce-titleTarjeta {
+	    font-size: 25px;
+	    line-height: 24px;
+	    margin: 15px 0 50px 0;
+	}
+	.conoce-tarjetasTexto {
+		font-size: 13px;
+    	margin-top: 40px;
+	}
+	.conoce-titleTarjetaMotos {
+	    font-size: 25px;
+	    margin: 10px 0 70px 0;
+	}
+	.conoce-titleTarjetaSeguros {
+	    margin: 10px 0 105px 0;
+	}
+	.conoce-containButton {
+	    right: 14%;
+	}
+	.conoce-button {
+	    padding: 7px 30px;
+	    font-size: 15px;
+	}
+}
+
+@media(max-width: 991px){
 	.conoce-titleTarjeta{
 		font-size: 35px;
 		line-height: 35px;
@@ -577,12 +660,6 @@ a:hover, a:active, a:focus, a:visited{
 	}
 	.conoce-titleTarjetaSeguros{
 		margin: 20px 0 45px 0;
-	}
-	.conoce-titleTarjeta > strong, .conoce-titleTarjetaMotos > strong, .conoce-titleTarjetaSeguros > strong{
-		font-size: 25px;
-	}
-	.conoce-tarjetasImg{
-		width: 48px;
 	}
 	.conoce-tarjetasTexto{
 		font-size: 15px;
@@ -609,7 +686,11 @@ a:hover, a:active, a:focus, a:visited{
 	}
 
 	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
-		width: 40%;
+		width: 35%;
+	}
+
+	.conoce-containButton {
+	    right: 30%;
 	}
 
 	.conoce-titleTarjeta {
@@ -647,6 +728,9 @@ a:hover, a:active, a:focus, a:visited{
 		left: 10%;
 		top: 30%;
 	}
+	.conoce-containButton {
+    	right: 20%;
+	}
 }
 
 @media(max-width: 500px){
@@ -660,5 +744,9 @@ a:hover, a:active, a:focus, a:visited{
 
 	.sliderPrincipal-containTextBottom{
 		position: initial;
+	}
+
+	.conoce-containButton {
+	    right: 15%;
 	}
 }

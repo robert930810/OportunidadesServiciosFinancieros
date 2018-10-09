@@ -80,7 +80,7 @@
                     </div>
                     <div class="footer-contianerNosotros">
                         <ul class="footer-menuNosotros">
-                            <h5 style="font-family: 'Barlow Condensed', sans-serif;">NOSOTROS</h5>
+                            <h5>NOSOTROS</h5>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Blog</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Quiénes somos</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Cobertura</a></li>
@@ -92,10 +92,10 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 resetCol">
-                    <h4 class="text-center footer-title">Si tienes alguna inquietud <strong style="font-family: 'Barlow Condensed', sans-serif;">¡Contáctanos!</strong></h4>
+                    <h4 class="text-center footer-title">Si tienes alguna inquietud <strong>¡Contáctanos!</strong></h4>
                     <div class="footer-containerServicioCliente">
                         <ul class="footer-menu">
-                            <h5 style="font-family: 'Barlow Condensed', sans-serif;">SERVICIO AL CLIENTE</h5>
+                            <h5 >SERVICIO AL CLIENTE</h5>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Por qué comprar con nosotros</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Tiempos y costos de envío</a></li>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-12 col-md-12 col-lg-3 resetCol">
                     <div class="footer-containerNewsletter">
-                        <h5 class="footer-titleNewsLetter" style="font-family: 'Barlow Condensed', sans-serif;">QUIERES RECIBIR LAS MEJORES OFERTAS</h5>
+                        <h5 class="footer-titleNewsLetter">QUIERES RECIBIR LAS MEJORES OFERTAS</h5>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Ingresa tu e-mail">
                             <div class="input-group-prepend">
