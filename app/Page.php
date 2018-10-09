@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
+	public $timestamps = false;
+
     protected $table = 'pages';
  
-    //protected $timestamp = false; remove if you want no timestamp on table
- 
     protected $fillable = ['name', 'description','content'];
+
+  
+
 }

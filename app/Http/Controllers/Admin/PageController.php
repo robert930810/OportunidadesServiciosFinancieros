@@ -24,6 +24,26 @@ class PageController extends Controller
     {
         return view('pages.create');
     }
+
+    public function store(Request $request)
+    {
+    	$page= new Page;
+        
+    	 request()->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $page->name=$request->get('name');
+        $page->description=$request->get('description');
+ 
+        //save data into database
+        $page->save();
+ 
+        //redirect to post index page
+        return redirect()->route('pages.index')
+                        ->with('success','page add successfully.');
+    }
  
     
 }
