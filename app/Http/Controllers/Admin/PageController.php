@@ -25,25 +25,6 @@ class PageController extends Controller
         return view('pages.create');
     }
 
-    public function store(Request $request)
-    {
-    	$page= new Page;
-        
-    	 request()->validate([
-            'name' => 'required',
-            'description' => 'required',
-        ]);
-
-        $page->name=$request->get('name');
-        $page->description=$request->get('description');
- 
-        //save data into database
-        $page->save();
- 
-        //redirect to post index page
-        return redirect()->route('pages.index')
-                        ->with('success','page add successfully.');
-    }
  
  	public function store(Request $request){
 
@@ -69,13 +50,21 @@ class PageController extends Controller
 
  	public function update(Request $request, $id)
     {
-        $page= Page::find($id);
-        $page->name=$request->get('name');
-        $page->email=$request->get('description');
-        $page->number=$request->get('content');
-        $page->office=$request->get('url');
-        $page->save();
+    	$page= Page::find($id);
+    	$page->where('id', $id)->update(['name' => $request->input('name'),
+    									'description'=> $request->input('description'),
+    									'content'=> $request->input('content')
+    ]);
+    	
+
+        
         return redirect()->route('pages.index')->with('Success','Page updated successfully');
+    }
+
+    public function show($id)
+    {
+        $page=Page::find($id);
+        return  view('pages.show',compact('page'));
     }
     
 }

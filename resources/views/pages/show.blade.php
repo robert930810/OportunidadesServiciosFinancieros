@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.app')
  
 @section('content')
  
@@ -23,13 +23,13 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Body:</strong>
+                <strong>Description:</strong>
                 {{ $page->description }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Body:</strong>
+                <strong>Content:</strong>
                 {{ $page->content }}
             </div>
         </div>
