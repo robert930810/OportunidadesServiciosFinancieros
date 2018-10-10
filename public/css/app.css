@@ -32,7 +32,7 @@ a:hover, a:active, a:focus, a:visited{
 .preHeader-item{
 	color: black !important;
 	font-size: 13px;
-	font-weight: bold;
+	font-weight: 500;
 	height: 25px;
 	padding: 5px 25px 0 25px !important;
 }
@@ -488,7 +488,7 @@ a:hover, a:active, a:focus, a:visited{
 }
 
 .footer-textTelefonosNal{
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .footer-imgNosotros{
@@ -513,6 +513,12 @@ a:hover, a:active, a:focus, a:visited{
 
 .footer-menuItem{
 	color: #fff;
+	font-weight: 200;
+}
+
+.footer-menuTitle{
+	font-weight: 600;
+	font-size: 15px;
 }
 
 .footer-menuItem:hover, .footer-menuItem:active, .footer-menuItem:visited, .footer-menuItem:focus{
@@ -524,11 +530,21 @@ a:hover, a:active, a:focus, a:visited{
 }
 
 .footer-containerNewsletter{
+    top: 40%;
 	padding: 0 10%;
+	position: absolute;
+    width: 100%;
 }
 
 .footer-titleNewsLetter{
 	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.footer-menuText{
+	color: #fff;
+	font-weight: 600;
 }
 
 
@@ -677,6 +693,15 @@ a:hover, a:active, a:focus, a:visited{
 		top: 0;
 		left: 0;
 	}
+	.footer-containerNewsletter{
+		position: initial;
+	}
+	.footer-menu{
+		padding: 45px 0;
+	}
+	.footer-containerServicioCliente{
+		border: none;
+	}
 }
 
 
@@ -684,13 +709,20 @@ a:hover, a:active, a:focus, a:visited{
 	.sliderPrincipal-containTextBottom {
 	    left: 33%;
 	}
-
+	.tarjetaLAst{
+		margin-left: 25%;
+	}
 	.conoce-TarjetaOportuya, .conoce-creditoMotos, .conoce-creditoLibranza, .conoce-seguros, .conoce-viajes{
 		width: 35%;
 	}
-
+	.footer-containMenu{
+		margin-bottom: 50px;
+	}
 	.conoce-containButton {
 	    right: 30%;
+	}
+	.footer-contianerTelefonos{
+		margin-left: 10%;
 	}
 
 	.conoce-titleTarjeta {
@@ -733,6 +765,12 @@ a:hover, a:active, a:focus, a:visited{
 	}
 }
 
+@media(max-width: 576px){
+	.tarjetaLAst{
+		margin-left: 0;
+	}
+}
+
 @media(max-width: 500px){
 	.convenios-text{
 		padding: 0 20px;
@@ -748,5 +786,11 @@ a:hover, a:active, a:focus, a:visited{
 
 	.conoce-containButton {
 	    right: 15%;
+	}
+	.footer-contianerNosotros {
+	    margin-left: 10%;
+	}
+	.footer-menu{
+		margin-left: 20%;
 	}
 }

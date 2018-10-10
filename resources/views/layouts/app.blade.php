@@ -67,7 +67,7 @@
 
         <div id="footer">
             <div class="row resetRow">
-                <div class="col-12 col-md-12 col-lg-3 resetCol">
+                <div class="col-12 col-md-12 col-lg-3 resetCol footer-containMenu">
                     <div class="footer-contianerLogo">
                         <img src="{{ asset('images/footer-oportunidadesServiciosFinancierosLogo.png')}}" title="Oportunidades Servicios Financieros" class="img-fluid">
                     </div>
@@ -80,7 +80,8 @@
                     </div>
                     <div class="footer-contianerNosotros">
                         <ul class="footer-menuNosotros">
-                            <h5>NOSOTROS</h5>
+                            <h5 class="footer-menuTitle">NOSOTROS</h5>
+                            <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Catálogo almacenes @php echo date("Y") @endphp</a></li>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Blog</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Quiénes somos</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Cobertura</a></li>
@@ -91,11 +92,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-6 resetCol">
+                <div class="col-12 col-md-12 col-lg-6 resetCol footer-containMenu">
                     <h4 class="text-center footer-title">Si tienes alguna inquietud <strong>¡Contáctanos!</strong></h4>
                     <div class="footer-containerServicioCliente">
                         <ul class="footer-menu">
-                            <h5 >SERVICIO AL CLIENTE</h5>
+                            <h5 class="footer-menuTitle" >SERVICIO AL CLIENTE</h5>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Por qué comprar con nosotros</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Tiempos y costos de envío</a></li>
@@ -114,6 +115,7 @@
                                 <button class="btn btn-primary">Suscribirse</button>
                             </div>
                         </div>
+                        <span class="footer-menuText">SÍGUENOS:</span> <a href="#"><img src="images/footer-facebookIcon.png" alt="Facebook Oportunidades Servicios Financieros" class="img-fluid"></a>
                     </div>
                 </div>
             </div>
