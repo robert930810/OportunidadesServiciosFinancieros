@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="{{ asset('css/slick-theme.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css')}}">
     <link href="{{ asset('editor/contentbuilder/codemirror/lib/codemirror.css')}}" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <link href="editor/contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="{{ asset('js/slick.min.js')}}"></script>
+    <link href="{{ asset('editor/contentbuilder/contentbuilder.css')}}" rel="stylesheet" type="text/css" /> 
     <body>
         <div id="preHeader">
             <div class="container-itemsPreHeader">
@@ -67,7 +67,7 @@
 
         <div id="footer">
             <div class="row resetRow">
-                <div class="col-12 col-md-12 col-lg-3 resetCol">
+                <div class="col-12 col-md-12 col-lg-3 resetCol footer-containMenu">
                     <div class="footer-contianerLogo">
                         <img src="{{ asset('images/footer-oportunidadesServiciosFinancierosLogo.png')}}" title="Oportunidades Servicios Financieros" class="img-fluid">
                     </div>
@@ -80,7 +80,8 @@
                     </div>
                     <div class="footer-contianerNosotros">
                         <ul class="footer-menuNosotros">
-                            <h5>NOSOTROS</h5>
+                            <h5 class="footer-menuTitle">NOSOTROS</h5>
+                            <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Catálogo almacenes @php echo date("Y") @endphp</a></li>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Blog</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Quiénes somos</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Cobertura</a></li>
@@ -91,11 +92,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-6 resetCol">
+                <div class="col-12 col-md-12 col-lg-6 resetCol footer-containMenu">
                     <h4 class="text-center footer-title">Si tienes alguna inquietud <strong>¡Contáctanos!</strong></h4>
                     <div class="footer-containerServicioCliente">
                         <ul class="footer-menu">
-                            <h5 >SERVICIO AL CLIENTE</h5>
+                            <h5 class="footer-menuTitle" >SERVICIO AL CLIENTE</h5>
                             <li><a href="#" class="footer-menuItem" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
                             <li><a href="#" class="footer-menuItem" title="Por qué comprar con nosotros">Por qué comprar con nosotros</a></li>
                             <li><a href="#" class="footer-menuItem" title="Tiempos y costos de envío">Tiempos y costos de envío</a></li>
@@ -114,6 +115,7 @@
                                 <button class="btn btn-primary">Suscribirse</button>
                             </div>
                         </div>
+                        <span class="footer-menuText">SÍGUENOS:</span> <a href="#"><img src="{{ asset('images/footer-facebookIcon.png')}}" alt="Facebook Oportunidades Servicios Financieros" class="img-fluid"></a>
                     </div>
                 </div>
             </div>
@@ -127,21 +129,17 @@
         <script type="text/javascript">
         
             jQuery(document).ready(function ($) {
-
             $("#contentarea").contentbuilder({
-                snippetFile: "editor/assets/minimalist-basic/snippets.html",
+                snippetFile: "http://localhost:8000/editor/assets/minimalist-basic/snippets.html",
                 snippetOpen: false,
                 toolbar: 'left',
-                iconselect: "editor/assets/ionicons/selecticon.html"
+                iconselect: "http://localhost:8000/editor/assets/ionicons/selecticon.html"
             });
-
             });
-
              function view() {
             /* This is how to get the HTML (for saving into a database) */
              var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
              }
-
         </script>
 
     </body>
@@ -162,8 +160,6 @@
                 }
             ]
         });
-
         
-
     </script>
 </html>

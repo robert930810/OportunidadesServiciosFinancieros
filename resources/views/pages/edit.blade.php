@@ -16,7 +16,7 @@
     @endif
 
 
-    <form method="post" action="{{ route('pages.update',$page->id) }}">  
+    <form method="post" action="{{ route('pages.update',$page->id) }} onsubmit="getHtmlValue()">  
         <input type="hidden" name="_method" value="PUT">
         {{ csrf_field() }}
         <div class="form-group">
@@ -27,13 +27,18 @@
 
             <label>page Description</label>
 
-            <label>page Content</label>
 
             <textarea name="description" rows="4" class="form-control">{{ $page->description }}</textarea>
         </div>
         <div class="form-group">
             <label>page Content</label>
-            <textarea name="content" rows="4" class="form-control">{{ $page->content }}</textarea>
+
+            <div id="contentarea" class="is-container container">
+                <h3>hola mundo</h3>
+                    {{ $page->content }}
+            </div>
+            <input type="hidden" name="content" id="content"> 
+            
         </div>
         <a href="{{ route('pages.index') }}" class="btn btn-default">Cancel</a>
         <button type="submit" class="btn btn-primary">Submit</button>
