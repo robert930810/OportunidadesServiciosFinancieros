@@ -136,13 +136,20 @@
                 snippetFile: "http://localhost:8000/editor/assets/minimalist-basic/snippets.html",
                 snippetOpen: false,
                 toolbar: 'left',
-                iconselect: "http://localhost:8000/editor/assets/ionicons/selecticon.html"
+                iconselect: "http://localhost:8000/editor/assets/ionicons/selecticon.html",
+                textAreaElement: "test1"
             });
+
+           
+
             });
              function view() {
             /* This is how to get the HTML (for saving into a database) */
              var sHTML = $('#contentarea').data('contentbuilder').viewHtml();
              }
+
+            
+             
         </script>
 
     </body>

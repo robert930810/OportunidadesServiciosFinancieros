@@ -32,12 +32,11 @@
         </div>
         <div class="form-group">
             <label>page Content</label>
-            <div class="is-container container">
-                 <textarea id="contentarea" class="form-control" name="content">
-                     {{ $page->content }}
-                 </textarea> 
+            <textarea id="test1" name="content">  </textarea>
+            <div id="contentarea" class="is-container container" >
+                {{ $page->content }}
             </div>
-                      
+            
         </div>
         <a href="{{ route('pages.index') }}" class="btn btn-default">Cancel</a>
         <button type="submit" class="btn btn-primary">Submit</button>
