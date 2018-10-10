@@ -33,7 +33,6 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
     var $activeRow;
 
     jQuery.contentbuilder = function (element, options) {
-        
         var defaults = {
             selectable: "h1,h2,h3,h4,h5,h6,p,blockquote,ul,ol,small,.edit,td,i",
             editMode: 'default',
@@ -522,19 +521,19 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
                         jQuery('#divSnippetCatOptions').css('width', jQuery(this).css('width'));
                         jQuery('#divSnippetCatOptions').addClass('active');
                     }
-					e.preventDefault();
-					e.stopImmediatePropagation();
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
                 });
                 jQuery('#divSnippetCatOptions > div').click(function(){
                     var valueSelected = jQuery(this).attr('data-value');
                     jQuery('#divSnippetCat').html(jQuery(this).html() + ' <span class="caret"></span>');
                     jQuery('#divSnippetCatOptions').removeClass('active');
 
-	                var $cbSnippetList = jQuery(cb_snippetList + ' > div');
+                    var $cbSnippetList = jQuery(cb_snippetList + ' > div');
                     if(valueSelected=='-1'){
                         $cbSnippetList.fadeIn(200);
                     } else {
-		                $cbSnippetList.fadeOut(200, function () {
+                        $cbSnippetList.fadeOut(200, function () {
                             var $this = jQuery(this);
                             var $catSplit = $this.attr('data-cat').split(',');
                             for (var j = 0; j < $catSplit.length; j++) {
@@ -546,11 +545,11 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
                     }
                 });
                 $('html').click(function (e) {
-	                if($(e.target).parents('#divSnippetCatOptions').length > 0) return false;
-	                if($(e.target).attr('id')=='divSnippetCatOptions') return false;
-	                if($(e.target).parents('#divSnippetCat').length > 0) return false;
-	                if($(e.target).attr('id')=='divSnippetCat') return false;
-                    jQuery('#divSnippetCatOptions').removeClass('active');		
+                    if($(e.target).parents('#divSnippetCatOptions').length > 0) return false;
+                    if($(e.target).attr('id')=='divSnippetCatOptions') return false;
+                    if($(e.target).parents('#divSnippetCat').length > 0) return false;
+                    if($(e.target).attr('id')=='divSnippetCat') return false;
+                    jQuery('#divSnippetCatOptions').removeClass('active');      
                 });
 
                 //Load snippet file (assets/.../snippets.html)
@@ -563,21 +562,21 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
 
                     try{
                         if($element.data('contentbuilder').settings.snippetPathReplace[0]!='') {
-					        var regex = new RegExp($element.data('contentbuilder').settings.snippetPathReplace[0], 'g');
+                            var regex = new RegExp($element.data('contentbuilder').settings.snippetPathReplace[0], 'g');
                             data = data.replace(regex,$element.data('contentbuilder').settings.snippetPathReplace[1]);
                                                         
                             var string1 = $element.data('contentbuilder').settings.snippetPathReplace[0].replace(/\//g, '%2F');
                             var string2 = $element.data('contentbuilder').settings.snippetPathReplace[1].replace(/\//g, '%2F');
 
-					        var regex2 = new RegExp(string1, 'g');
-					        data = data.replace(regex2,string2);
+                            var regex2 = new RegExp(string1, 'g');
+                            data = data.replace(regex2,string2);
                         }
                     } catch(e){}
-					
+                    
                     var $currentDataChildren = jQuery('<div/>').html(data).children('div');
        
-					for (var i = 1; $currentDataChildren.length >= i; i++) {
-						var $this = jQuery($currentDataChildren[i-1]);
+                    for (var i = 1; $currentDataChildren.length >= i; i++) {
+                        var $this = jQuery($currentDataChildren[i-1]);
                         var block = $this.html();
                         //Enclode each block. Source: http://stackoverflow.com/questions/1219860/html-encoding-in-javascript-jquery
                         var blockEncoded = jQuery('<div/>').text(block).html();
@@ -590,7 +589,7 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
                             htmlThumbs += '<div style="display:none" title="Snippet ' + i + '" data-snip="' + i + '" data-cat="' + $this.data("cat") + '"><img src="' + thumb + '" /></div>';
                         } else {
                             htmlThumbs += '<div title="Snippet ' + i + '" data-snip="' + i + '" data-cat="' + $this.data("cat") + '"><img src="' + thumb + '" /></div>';
-                        }    						
+                        }                           
                     }
                
                     jQuery('#divSnippets').html(htmlData);
@@ -602,7 +601,7 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
                         var cats = [];
 
                         var defaultExists = false;
-						var $cbSnippetListDivs = jQuery(cb_snippetList + ' > div');
+                        var $cbSnippetListDivs = jQuery(cb_snippetList + ' > div');
 
                         for (var cbs = 0; $cbSnippetListDivs.length > cbs; cbs++) {
                             var $this = jQuery($cbSnippetListDivs[cbs]);
@@ -636,7 +635,7 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
                                 }
                             }
                         }
-						
+                        
                         if(!defaultExists){//old version: default not exists, show all (backward compatibility)
                             jQuery(cb_snippetList + ' > div').css('display','block');
                             jQuery('#divSnippetCatOptions').find("[data-value='0']").remove();
@@ -886,14 +885,15 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
             $element.droppable({
                 drop: function (event, ui) {
                     if (jQuery(ui.draggable).data('snip')) {
+
                         var snip = jQuery(ui.draggable).data('snip');
                         var snipHtml = jQuery('#snip' + snip).text();
-                    
-                        snipHtml = snipHtml.replace(/{id}/g, makeid());                      
-
+                        snipHtml = snipHtml.replace(/{id}/g, makeid());
+                        var htmlTextArea = $("#"+options.textAreaElement).text();
+                        $("#"+options.textAreaElement).text(htmlTextArea + snipHtml);
                         jQuery(ui.draggable).data('snip', null); //clear
                         return ui.draggable.html(snipHtml);
-                        event.preventDefault();                        
+                        event.preventDefault();
                     }
                 },
                 tolerance: 'pointer',
@@ -1864,23 +1864,23 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
 
         };
 
-		this.destroy = function () {
+        this.destroy = function () {
             if(!$element.data('contentbuilder')) return;
             var sHTML = $element.data('contentbuilder').html();
             $element.html(sHTML);
-			
-			// ---by jack
-			$element.sortable("destroy"); //destroy sortable
-			
-			//del element from cb_list
-			var cbarr = cb_list.split(","), newcbarr = [];
-			for(var i=0; i < cbarr.length; i++) {
-				if(cbarr[i] != "#"+$element.attr("id")) {
-					newcbarr.push(cbarr[i]);
-				}
-			}
-			cb_list = newcbarr.join(",");
-			// ---end by jack
+            
+            // ---by jack
+            $element.sortable("destroy"); //destroy sortable
+            
+            //del element from cb_list
+            var cbarr = cb_list.split(","), newcbarr = [];
+            for(var i=0; i < cbarr.length; i++) {
+                if(cbarr[i] != "#"+$element.attr("id")) {
+                    newcbarr.push(cbarr[i]);
+                }
+            }
+            cb_list = newcbarr.join(",");
+            // ---end by jack
 
             //added by yus
             for (var i = 0; i < instances.length; i++) {
@@ -1891,16 +1891,16 @@ document.getElementsByTagName('head')[0].appendChild(sc2);
 
             $element.removeClass('connectSortable');
             $element.css({ 'min-height': '' });
-			
+            
             /*
-			// ---by jack
-			if(cb_list=="") {
-				jQuery('#divCb').remove();
-                jQuery(document).off('mousedown');		
-			}
-			// ---end by jack	
-            */	
-            	
+            // ---by jack
+            if(cb_list=="") {
+                jQuery('#divCb').remove();
+                jQuery(document).off('mousedown');      
+            }
+            // ---end by jack   
+            */  
+                
             $element.removeData('contentbuilder');
             $element.removeData('contenteditor');
             //$element.unbind();
@@ -2066,23 +2066,23 @@ var savedSelPublic;
             html_table += '</table>';
 
             html_rte += '</div>' +
-				'' +
-				'<div id="divRteLink">' +
-					'<i class="cb-icon-link"></i> Edit' +
-				'</div>' +
-				'' +
-				'<div id="divFrameLink">' +
-					'<i class="cb-icon-link"></i> Edit' +
-				'</div>' +
-				'' +
-				'<div id="divRteTable">' +
-					'<button id="btnEditTable" title="Edit"><i class="cb-icon-pencil"></i></button>' +
-					'<button id="btnDeleteTable" title="Delete"><i class="cb-icon-cancel"></i></button>' +
-				'</div>' +
+                '' +
+                '<div id="divRteLink">' +
+                    '<i class="cb-icon-link"></i> Edit' +
+                '</div>' +
+                '' +
+                '<div id="divFrameLink">' +
+                    '<i class="cb-icon-link"></i> Edit' +
+                '</div>' +
+                '' +
+                '<div id="divRteTable">' +
+                    '<button id="btnEditTable" title="Edit"><i class="cb-icon-pencil"></i></button>' +
+                    '<button id="btnDeleteTable" title="Delete"><i class="cb-icon-cancel"></i></button>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal md-draggable" id="md-createlink">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             '<div class="md-modal-handle">' +
                                 '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                             '</div>' +
@@ -2098,16 +2098,16 @@ var savedSelPublic;
                             '<div class="md-label">Target:</div>' +
                             '<label style="float:left;" for="chkNewWindow" class="inpchk"><input type="checkbox" id="chkNewWindow"></input> New Window</label>' +
                             '<br style="clear:both">' +
-				        '</div>' +
-					    '<div class="md-footer">' +
+                        '</div>' +
+                        '<div class="md-footer">' +
                             '<button id="btnLinkOk"> Ok </button>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +     
+                    '</div>' +
+                '</div>' +     
                 '' +
                 '<div class="md-modal md-draggable" id="md-insertimage">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             '<div class="md-modal-handle">' +
                                 '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                             '</div>' +
@@ -2125,23 +2125,23 @@ var savedSelPublic;
                             '<div class="md-label">Or Specify Image Source:</div>' +
                             (bUseCustomImageSelect ? '<input type="text" id="txtImgUrl_rte" class="inptxt" style="float:left;width:60%"></input><i class="cb-icon-link md-btnbrowse" id="btnImageBrowse_rte" style="width:10%;"></i>' : '<input type="text" id="txtImgUrl_rte" class="inptxt" style="float:left;width:70%"></input>') +
                             '<br style="clear:both">' +              
-				        '</div>' +
-					    '<div class="md-footer">' +
+                        '</div>' +
+                        '<div class="md-footer">' +
                             '<button id="btnImgOk_rte"> Ok </button>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal" id="md-createsrc">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             '<input type="text" id="txtSrc" class="inptxt" value="http:/' + '/"></input>' +
-				        '</div>' +
-					    '<div class="md-footer">' +
+                        '</div>' +
+                        '<div class="md-footer">' +
                             '<button id="btnSrcOk"> Ok </button>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal" id="md-createiframe">' +
                     '<div class="md-content">' +
@@ -2166,8 +2166,8 @@ var savedSelPublic;
                 '</div>' +
                 '' +
                 '<div class="md-modal md-draggable" id="md-edittable">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             '<div class="md-modal-handle">' +
                                 '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                             '</div>' +
@@ -2188,7 +2188,7 @@ var savedSelPublic;
                                 '<div>' +
                                     'Border Thickness:<br>' +
                                     '<select id="selCellBorderWidth" style="width:120px;"><option value="0">No Border</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>' +  
-				                '</div>' +
+                                '</div>' +
                                 '<div>' +
                                     'Border Color:<br>' + 
                                     '<input type="text" id="inpCellBorderColor" value=""/>' +  
@@ -2203,9 +2203,9 @@ var savedSelPublic;
                                         '<option value="oddrows">Odd Rows</option>' +  
                                         '<option value="currentcell">Current Cell</option>' +  
                                     '</select>' +
-				                '</div>' +
+                                '</div>' +
                                 '' +
-				            '</div>' +
+                            '</div>' +
                             '<div id="divTableLayout" style="overflow-y:auto;overflow-x:hidden;display:none;box-sizing:border-box;padding:10px 10px 10px">' +
                                 '<div>' +
                                     'Insert Row:<br>' +
@@ -2227,22 +2227,22 @@ var savedSelPublic;
                                     '<button data-rte-cmd="mergecell" title="Merge Cell" style="width:205px"> Merge Cell </button>' + 
                                 '</div>' +
                                 '' +
-				            '</div>' +
+                            '</div>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal" id="md-deltableconfirm">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +                            
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +                            
                             '<div style="padding:20px 20px 25px;text-align:center;">' +
                             '<p>Are you sure you want to delete this table?</p>' +
                             '<button id="btnDelTableCancel"> CANCEL </button>' +
                             '<button id="btnDelTableOk" style="margin-left:12px"> OK </button>' +
                             '</div>' +
-				        '</div>' +
-			        '</div>' +
-		        '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="rte-pop" id="pop-list">' +
                     '<button class="md-picklist half" data-list="indent" title="Indent" style="margin-right:0px"> <i class="cb-icon-indent-right"></i> </button>' +
@@ -2320,31 +2320,31 @@ var savedSelPublic;
                 '</div>' +
                 '' +
                 '<div class="md-modal md-draggable" id="md-fontsize" style="border-radius:12px">' +
-			        '<div class="md-content" style="border-radius:12px">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content" style="border-radius:12px">' +
+                        '<div class="md-body">' +
                             '<div class="md-modal-handle">' +
                                 '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                             '</div>' +
                             '<iframe id="ifrFontSize" style="width:100%;height:319px;border: none;display: block;" src="' + sScriptPath + 'blank.html"></iframe>' +
                             '<button class="md-pickfontsize" data-font-size="" style="display:none"></button>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal md-draggable" id="md-html">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             '<div class="md-modal-handle" style="display:none">' +
                                 '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                             '</div>' +
                             '<textarea id="txtHtml" class="inptxt" style="height:450px;"></textarea>' +
-				        '</div>' +
-					    '<div class="md-footer">' +
+                        '</div>' +
+                        '<div class="md-footer">' +
                             '<button id="btnHtmlCancel" class="secondary"> Cancel </button>' +
                             '<button id="btnHtmlOk" class="primary"> Ok </button>' +
                         '</div>' +
-			        '</div>' +
-		        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
                 '<div class="md-modal md-draggable" id="md-editcontentmodule">' +
                     '<div class="md-content">' +
@@ -2356,7 +2356,7 @@ var savedSelPublic;
                             '<input id="hidContentModuleCode" type="hidden" />' +
                             '<input id="hidContentModuleSettings" type="hidden" />' +
                         '</div>' +
-					    '<div class="md-footer">' +
+                        '<div class="md-footer">' +
                             '<button id="btnContentModuleCancel" class="secondary"> Cancel </button>' +
                             '<button id="btnContentModuleOk" class="primary"> Ok </button>' +
                         '</div>' +
@@ -2371,7 +2371,7 @@ var savedSelPublic;
                             '<textarea id="txtContentCustomCode" class="inptxt" style="background: #fff;"></textarea>' +
                             '<input id="hidContentCustomCode" type="hidden" />' +
                         '</div>' +
-					    '<div class="md-footer">' +
+                        '<div class="md-footer">' +
                             '<button id="btnContentCustomCodeCancel" class="secondary"> Cancel </button>' +
                             '<button id="btnContentCustomCodeOk" class="primary"> Ok </button>' +
                         '</div>' +
@@ -2379,27 +2379,27 @@ var savedSelPublic;
                 '</div>' +
                 '' +
                 '<div class="md-modal" id="md-fileselect">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +
                             (bUseCustomFileSelect ? '<iframe id="ifrFileBrowse" style="width:100%;height:400px;border: none;display: block;" src="' + sScriptPath + 'blank.html"></iframe>' : '') +
-				        '</div>' +
-			        '</div>' +
-		        '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '<input type="hidden" id="active-input" />' +
                 '' +
                 '<div class="md-modal" id="md-delrowconfirm">' +
-			        '<div class="md-content">' +
-				        '<div class="md-body">' +                            
+                    '<div class="md-content">' +
+                        '<div class="md-body">' +                            
                             '<div style="padding:20px 20px 25px;text-align:center;">' +
                             '<p>Are you sure you want to delete this block?</p>' +
                             '<button id="btnDelRowCancel"> CANCEL </button>' +
                             '<button id="btnDelRowOk" style="margin-left:12px"> OK </button>' +
                             '</div>' +
-				        '</div>' +
-			        '</div>' +
-		        '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
                 '' +
-		        '<div class="md-modal md-draggable" id="md-icon-select">' +
+                '<div class="md-modal md-draggable" id="md-icon-select">' +
                     '<div class="md-content">' +
                         '<div class="md-body md-settings">' +
                             '<div class="md-modal-handle">' +
@@ -2410,7 +2410,7 @@ var savedSelPublic;
                     '</div>' +
                 '</div>' +
                 '' +
-		        '<div class="md-modal md-draggable" id="md-tags-select">' +
+                '<div class="md-modal md-draggable" id="md-tags-select">' +
                     '<div class="md-content">' +
                         '<div class="md-body md-settings">' +
                             '<div class="md-modal-handle">' +
@@ -2611,9 +2611,9 @@ var savedSelPublic;
 
                 var $active_element;
                 if(jQuery(event.target).parents(".ui-draggable").length>0){
-	                if( jQuery(event.target).parents(".ui-draggable").parent().data('contentbuilder') ) {
-		                $active_element = jQuery(event.target).parents(".ui-draggable").parent(); //Get current Builder element                        
-	                }                
+                    if( jQuery(event.target).parents(".ui-draggable").parent().data('contentbuilder') ) {
+                        $active_element = jQuery(event.target).parents(".ui-draggable").parent(); //Get current Builder element                        
+                    }                
                 } 
 
                 var bEditable = false;
@@ -4262,7 +4262,7 @@ var savedSelPublic;
                 jQuery('#fileInsertImage').clearInputs();
                 jQuery('.md-preview-area').hide();
                 jQuery('.md-drop-area').show();    
-		        jQuery('.md-drop-area').removeClass('image-dropping');
+                jQuery('.md-drop-area').removeClass('image-dropping');
 
                 //Clear image source input
                 jQuery('#txtImgUrl_rte').val('');
@@ -4361,12 +4361,12 @@ var savedSelPublic;
 
             jQuery('.md-drop-area').off('dragover');
             jQuery('.md-drop-area').on('dragover', function () {
-		        jQuery('.md-drop-area').addClass('image-dropping');
-	        });
+                jQuery('.md-drop-area').addClass('image-dropping');
+            });
 
             jQuery('.md-drop-area').off('dragleave');
-	        jQuery('.md-drop-area').on('dragleave', function () {
-		        jQuery('.md-drop-area').removeClass('image-dropping');
+            jQuery('.md-drop-area').on('dragleave', function () {
+                jQuery('.md-drop-area').removeClass('image-dropping');
             });
 
             jQuery('.md-preview-area i').off('click');
@@ -4374,7 +4374,7 @@ var savedSelPublic;
                 jQuery('#fileInsertImage').clearInputs();
                 jQuery('.md-preview-area').hide();
                 jQuery('.md-drop-area').show();    
-		        jQuery('.md-drop-area').removeClass('image-dropping');
+                jQuery('.md-drop-area').removeClass('image-dropping');
             });
 
             jQuery('#txtImgUrl_rte').off('keyup');
@@ -4383,8 +4383,8 @@ var savedSelPublic;
                 jQuery('#fileInsertImage').clearInputs();
                 jQuery('.md-preview-area').hide();
                 jQuery('.md-drop-area').show();    
-		        jQuery('.md-drop-area').removeClass('image-dropping');		       
-	        });
+                jQuery('.md-drop-area').removeClass('image-dropping');             
+            });
             
             //Open Custom Image Select
             jQuery("#btnImageBrowse_rte").off('click');
@@ -4410,7 +4410,7 @@ var savedSelPublic;
                                 jQuery('#fileInsertImage').clearInputs();
                                 jQuery('.md-preview-area').hide();
                                 jQuery('.md-drop-area').show();    
-		                        jQuery('.md-drop-area').removeClass('image-dropping');
+                                jQuery('.md-drop-area').removeClass('image-dropping');
                             }                               
                         }
                     });
@@ -6380,8 +6380,8 @@ var savedSelPublic;
             jQuery('[data-rte-cmd="createLink"]').off('click');
             jQuery('[data-rte-cmd="createLink"]').click(function (e) {
 
-                // source: 	http://stackoverflow.com/questions/6251937/how-to-get-selecteduser-highlighted-text-in-contenteditable-element-and-replac
-                //   		http://stackoverflow.com/questions/4652734/return-html-from-a-user-selection/4652824#4652824
+                // source:  http://stackoverflow.com/questions/6251937/how-to-get-selecteduser-highlighted-text-in-contenteditable-element-and-replac
+                //          http://stackoverflow.com/questions/4652734/return-html-from-a-user-selection/4652824#4652824
                 var html = "";
                 if (typeof window.getSelection != "undefined") {
                     var sel = window.getSelection();
@@ -7185,7 +7185,7 @@ function getSelectionStartNode() {
         selection = document.selection;
         var range = selection.getRangeAt ? selection.getRangeAt(0) : selection.createRange();
         node = range.commonAncestorContainer ? range.commonAncestorContainer :
-			   range.parentElement ? range.parentElement() : range.item(0);
+               range.parentElement ? range.parentElement() : range.item(0);
     }
     if (node) {
         return (node.nodeName == "#text" ? node.parentNode : node);
@@ -7429,14 +7429,14 @@ var $imgActive;
                             '<img id="my-image" src="" style="max-width:none" />' +
                         '</div>' +
                         '<div id="img-control" style="margin-top:1px;position:absolute;top:-31px;left:0px;width:235px;opacity:0.8">' +
-					        '<button id="btnImageCancel" type="button" value="Cancel" ><i class="cb-icon-back"></i></button>' +
+                            '<button id="btnImageCancel" type="button" value="Cancel" ><i class="cb-icon-back"></i></button>' +
                             '<button id="btnZoomOut" type="button" value="-" ><i class="cb-icon-minus"></i></button>' +
                             '<button id="btnZoomIn" type="button" value="+" ><i class="cb-icon-plus"></i></button>' +
                             '<button id="btnImageMore" type="button" value="..." >...</button>' +
                             '<button id="btnChangeImage" type="button" value="Ok" ><i class="cb-icon-ok"></i> Ok</button>' +
                         '</div>' +
                         '<div id="divImageMore" style="display:none">' +
-				            '<label for="chkImageNoCrop"><input id="chkImageNoCrop" type="checkbox" />No Crop</label>' +
+                            '<label for="chkImageNoCrop"><input id="chkImageNoCrop" type="checkbox" />No Crop</label>' +
                             '<br>' + 
                             (this.settings.largerImageHandler == '' ? '' : '<label for="chkImageClickToEnlarge"><input id="chkImageClickToEnlarge" type="checkbox" />Click to enlarge</label><br>') +
                             '<button id="btnImageMoreOk" type="button" value="Ok" ><i class="cb-icon-ok"></i> Ok</button>' +
@@ -7444,12 +7444,12 @@ var $imgActive;
                     '</div>' +
                     '<div style="display:none;">' +
                         '<canvas id="myCanvas"></canvas>' +
-				        '<canvas id="myTmpCanvas"></canvas>' +
-				        '<canvas id="myTmpCanvasNoCrop"></canvas>' +
+                        '<canvas id="myTmpCanvas"></canvas>' +
+                        '<canvas id="myTmpCanvasNoCrop"></canvas>' +
                     '</div>' +
                     '<form id="canvasform" name="canvasform" method="post" action="" target="canvasframe" enctype="multipart/form-data">' +
                         html_photo_file +
-				        '<input id="hidRefId" name="hidRefId" type="hidden" value="' + this.settings.customval + '" />' + /* for larger image upload */
+                        '<input id="hidRefId" name="hidRefId" type="hidden" value="' + this.settings.customval + '" />' + /* for larger image upload */
                     '</form>' +
                     '<iframe id="canvasframe" name="canvasframe" style="width:1px;height:1px;border:none;visibility:hidden;position:absolute"></iframe>';
 
@@ -7482,8 +7482,8 @@ var $imgActive;
                     '</div>' +
                     '' +
                     '<div class="md-modal md-draggable" id="md-img">' +
-			            '<div class="md-content">' +
-				            '<div class="md-body">' +
+                        '<div class="md-content">' +
+                            '<div class="md-body">' +
                                 '<div class="md-modal-handle">' +
                                     '<i class="cb-icon-dot"></i><i class="cb-icon-cancel md-modal-close"></i>' +
                                 '</div>' +
@@ -7530,7 +7530,7 @@ var $imgActive;
                                     '<br style="clear:both">' +
                                     '<div class="md-label">Link:</div>' +
                                     (bUseCustomFileSelect ? '<input type="text" id="txtLinkUrl" class="inptxt" style="float:left;width:60%"></input><i class="cb-icon-link md-btnbrowse" id="btnFileBrowse" style="width:10%;"></i>' : '<input type="text" id="txtLinkUrl" class="inptxt" style="float:left;width:70%"></input>') +
-				                    '<br style="clear:both">' +
+                                    '<br style="clear:both">' +
                                     '<div class="md-label">Target:</div>' +
                                     '<label style="float:left;" for="chkNewWindow2" class="inpchk"><input type="checkbox" id="chkNewWindow2"></input> New Window</label>' +
                                     '<br style="clear:both">' +
@@ -7541,28 +7541,28 @@ var $imgActive;
                                     '</div>' +
                                 '</div>' +
                             '</div>' +
-					        '<div id="divImgLnkOk" class="md-footer">' +
+                            '<div id="divImgLnkOk" class="md-footer">' +
                                 '<button id="btnImgOk"> Ok </button>' +
                             '</div>' +
-			            '</div>' +
-		            '</div>' +
+                        '</div>' +
+                    '</div>' +
                     '' +
                     '<div class="md-modal" id="md-imageselect">' +
-			            '<div class="md-content">' +
-				            '<div class="md-body">' +
+                        '<div class="md-content">' +
+                            '<div class="md-body">' +
                                 (bUseCustomImageSelect ? '<iframe id="ifrImageBrowse" style="width:100%;height:400px;border: none;display: block;" src="' + sScriptPath + 'blank.html"></iframe>' : '') +
-				            '</div>' +
-			            '</div>' +
-		            '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
                     '';
                     if (jQuery('#md-fileselect').length==0) {
                         html_hover_icons += '<div class="md-modal" id="md-fileselect">' +
-			                '<div class="md-content">' +
-				                '<div class="md-body">' +
+                            '<div class="md-content">' +
+                                '<div class="md-body">' +
                                     (bUseCustomFileSelect ? '<iframe id="ifrFileBrowse" style="width:100%;height:400px;border: none;display: block;" src="' + sScriptPath + 'blank.html"></iframe>' : '') +
-				                '</div>' +
-			                '</div>' +
-		                '</div>'; 
+                                '</div>' +
+                            '</div>' +
+                        '</div>'; 
                     }
                     if (jQuery('#active-input').length==0) {
                         html_hover_icons += '<input type="hidden" id="active-input" />';
@@ -9341,15 +9341,15 @@ var zindex = 10000;
             if(!this.settings.noOverlay){
                 $ovlid.remove();
             }
-			
-			zindex = zindex-2;
+            
+            zindex = zindex-2;
 
             $element.data('simplemodal').settings.onFinish();
         };
 
         this.show = function (savedSel) {
-			
-			zindex = zindex+1;		
+            
+            zindex = zindex+1;      
 
             if(!this.settings.noOverlay){
                 var rnd = makeid();
@@ -9364,10 +9364,10 @@ var zindex = 10000;
             /*setTimeout(function () {
                 $element.addClass('md-show');
             }, 1);*/
-			
-			zindex = zindex+1;
-			$element.css('z-index',zindex);
-			
+            
+            zindex = zindex+1;
+            $element.css('z-index',zindex);
+            
             $element.addClass('md-show');
             $element.stop(true, true).css('display', 'none').fadeIn(200);
 
@@ -9404,10 +9404,10 @@ var zindex = 10000;
                     });
                     $ovlid.remove();//
 
-				    zindex = zindex-2;
+                    zindex = zindex-2;
 
                     if(savedSel) restoreSelection(savedSel);
-				
+                
                     $element.data('simplemodal').settings.onCancel();
                 });
             }
