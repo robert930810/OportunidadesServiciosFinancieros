@@ -50,15 +50,14 @@ class PageController extends Controller
 
     public function update(Request $request, $id)
     {
-        $page= Page::find($id);
-        $page->where('id', $id)->update(['name' => $request->input('name'),
-                                        'description'=> $request->input('description'),
-                                        'content'=> $request->input('content')
-    ]);
-        
+        $page= Page::findOrfail($id);
+        $page->name= $request->name;
+        $page->description= $request->description;
+        $page->content= $request->content;
+        $page->url= $request->url; 
+        $page->save();
 
-        
-        return redirect()->route('pages.index')->with('Success','Page updated successfully');
+        return  view('pages.show',compact('page'));
     }
 
     public function show($id)
