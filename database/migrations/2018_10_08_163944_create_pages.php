@@ -19,11 +19,9 @@ class CreatePages extends Migration
 
             $table->integer('idUser')->nullable()->unsigned();
 
-            $table->integer('idUser')->unsigned()->nullable();
-
             $table->integer('idCategory')->nullable();
             $table->string('description')->nullable();
-            $table->string('content')->nullable();
+            $table->longText('content')->nullable();
             $table->string('url')->unique()->nullable();
         });
 
