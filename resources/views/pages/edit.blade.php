@@ -16,13 +16,8 @@
     @endif
 
 
-    <form method="PUT" action="{{ route('pages.update',$page->id) }}">
-
-    <form method="PUT" action="{{ route('pages.update', $page->id) }}">
-
-
-    <form method="PUT" action="{{ route('pages.update', $page->id) }}">
-
+    <form method="post" action="{{ route('pages.update',$page->id) }}">  
+        <input type="hidden" name="_method" value="PUT">
         {{ csrf_field() }}
         <div class="form-group">
             <label>Page Title</label>
