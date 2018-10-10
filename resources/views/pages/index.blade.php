@@ -15,10 +15,10 @@
         <table class="table table-bordered table-hover table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
                     <th>ID</th>
                     <th>name</th>
                     <th>Description</th>
+                    <th>Options</th>
                 </tr>
             </thead>
             <tbody>
