@@ -547,6 +547,12 @@ a:hover, a:active, a:focus, a:visited{
 	font-weight: 600;
 }
 
+/*Administrador de páginas*/
+
+.containerPages{
+	padding: 30px;
+}
+
 
 
 /* Media Queries */
