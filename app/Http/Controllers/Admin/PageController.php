@@ -82,7 +82,7 @@ class PageController extends Controller
        
 
             $page=Page::findOrfail($id);
-            $page->save();
+            $page->delete();
 
             return redirect()->route('pages.index');
        
