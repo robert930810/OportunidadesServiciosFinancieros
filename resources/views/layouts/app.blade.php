@@ -132,13 +132,10 @@
         <script type="text/javascript">
         
             jQuery(document).ready(function ($) {
-            $("#contentarea").contentbuilder({
-                snippetFile: "http://localhost:8000/editor/assets/minimalist-basic/snippets.html",
-                snippetOpen: false,
-                toolbar: 'left',
-                iconselect: "http://localhost:8000/editor/assets/ionicons/selecticon.html",
-                textAreaElement: "test1"
-            });
+            
+
+
+            editorInit('test1','http://localhost:8000/editor/assets/minimalist-basic/snippets-bootstrap.html');
 
            
 

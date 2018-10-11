@@ -13,15 +13,18 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+
+
+    public function index(){
+
         $pages = Page::paginate(2);
  
         return view('pages.index', ['pages' => $pages]);
     }
 
-    public function create()
-    {
+
+    public function create(){
+
         return view('pages.create');
     }
 
@@ -43,13 +46,18 @@ class PageController extends Controller
         return redirect()->route('pages.index')->with('success','Page add successfully');
     }
 
+
     public function edit($id){
+       
         $page = Page::find($id);
-        return view('pages.edit',compact('page','id'));
+       
+       return view('pages.edit',compact('page','id'));
     }
 
-    public function update(Request $request, $id)
-    {
+
+
+    public function update(Request $request, $id){
+
         $page= Page::findOrfail($id);
         $page->name= $request->name;
         $page->description= $request->description;
@@ -60,10 +68,24 @@ class PageController extends Controller
         return  view('pages.show',compact('page'));
     }
 
-    public function show($id)
-    {
+
+    public function show($id){
+
         $page=Page::find($id);
+
         return  view('pages.show',compact('page'));
     }
+
     
+    public function destroy($id){
+       
+       
+
+            $page=Page::findOrfail($id);
+            $page->save();
+
+            return redirect()->route('pages.index');
+       
+       
+    }       
 }

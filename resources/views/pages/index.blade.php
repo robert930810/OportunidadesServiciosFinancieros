@@ -32,9 +32,9 @@
                         <a href="{{ route('pages.show', $page->id) }}" class="btn btn-success" style="margin-bottom: 10px; width: 70px;">View</a><br>
                         <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-info" style="margin-bottom: 10px; width: 70px;">Edit</a>
  
-                        <form action="{{ route('pages.destroy', [$page->id]) }}" method="POST">
-                             {{ csrf_field() }}
-                             {{ method_field('DELETE') }}
+                        <form action="{{ route('pages.destroy', $page->id) }}" method="POST" >
+                            @method('DELETE')
+                            @csrf                            
                            <input type="submit" class="btn btn-danger" value="Delete"/>
                         </form>
                     </td>
