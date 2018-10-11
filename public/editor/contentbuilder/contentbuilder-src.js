@@ -26,32 +26,12 @@ var sc2 = document.createElement('link');
 sc2.rel = 'stylesheet';
 sc2.type = 'text/css';
 sc2.href = sScriptPath + 'codemirror/lib/codemirror.css';
-var verufyChanges = false;
-var elementGlobal = "";
 document.getElementsByTagName('head')[0].appendChild(sc2);
-function editorInit(element, ruta){
-    elementGlobal = element;
-    var options = {
-        snippetFile: ruta,
-        snippetOpen: true,
-        toolbar: 'left',
-        iconselect: 'assets/ionicons/selecticon.html',
-        textAreaElement: elementGlobal
-    };
-    var htmlTextArea = $("#"+options.textAreaElement).text();
-    $("#"+options.textAreaElement).after('<div id="contentarea" class="is-container container-fluid">'+ htmlTextArea +'</div>');
-    // $("#"+options.textAreaElement).css('display', 'none');
-    $("#contentarea").contentbuilder(options);
-}
-
-function equalHtmlDivToText(element){
-    var htmlDiv = $("#contentarea").html();
-    $("#"+elementGlobal).text(htmlDiv);
-}
-
 
 (function (jQuery) {
+
     var $activeRow;
+
     jQuery.contentbuilder = function (element, options) {
         var defaults = {
             selectable: "h1,h2,h3,h4,h5,h6,p,blockquote,ul,ol,small,.edit,td,i",
@@ -909,6 +889,8 @@ function equalHtmlDivToText(element){
                         var snip = jQuery(ui.draggable).data('snip');
                         var snipHtml = jQuery('#snip' + snip).text();
                         snipHtml = snipHtml.replace(/{id}/g, makeid());
+                        var htmlTextArea = $("#"+options.textAreaElement).text();
+                        $("#"+options.textAreaElement).text(htmlTextArea + snipHtml);
                         jQuery(ui.draggable).data('snip', null); //clear
                         return ui.draggable.html(snipHtml);
                         event.preventDefault();
@@ -1873,7 +1855,7 @@ function equalHtmlDivToText(element){
         };
 
         this.blockChanged = function () {
-            equalHtmlDivToText(options.textAreaElement);
+
             if($element.children().length==0) {
                 $element.addClass('empty');
             } else {
@@ -3037,7 +3019,6 @@ var savedSelPublic;
             }
 
             $element.data('contenteditor').getState();
-            equalHtmlDivToText();
 
         };
 
