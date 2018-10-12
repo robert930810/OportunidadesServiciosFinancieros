@@ -194,6 +194,22 @@ a:hover, a:active, a:focus, a:visited{
 	color: white;
 }
 
+
+/*slider Oportuya*/
+
+.oportuyaSliderContent{
+
+	position: absolute;
+	bottom: 40%;
+	left:9%;
+}
+
+.oportuyaSliderTitle p {
+	font-size: 2em;
+	font-weight: 500;
+}
+
+
 /* Conoce */
 
 #conoce{
