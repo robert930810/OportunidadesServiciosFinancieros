@@ -45,7 +45,9 @@
             <div class="row resetRow">
                 <div class="col-12 col-sm-6 resetCol">
                     <div class="header-containerLogo">
+                        <a href="/">
                         <img src="<?php echo e(asset('images/opottunidadesServiciosFinancierosLogo.png')); ?>" title="Oportunidades Servicios Financieros" class="img-fluid">
+                        </a>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 resetCol">
@@ -55,7 +57,7 @@
                         </button>
                         <div class="collapse navbar-collapse header-containerItems" id="navbarNavAltMarkup">
                             <div class="navbar-nav header-menu">
-                                <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Oportuya</span></a>
+                                <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
                                 <a class="nav-item nav-link header-item header-item2" href="#"> <span class="header-textoItem">Crédito motos</span></a>
                                 <a class="nav-item nav-link header-item header-item3" href="#"> <span class="header-textoItem">Crédito libranza</span></a>
                                 <a class="nav-item nav-link header-item header-item4" href="#"> <span class="header-textoItem">Seguros</span></a>
@@ -142,7 +144,9 @@
 
             editorInit('test1','http://localhost:8000/editor/assets/minimalist-basic/snippets-bootstrap.html');
 
-           
+            var contentCardHeight=$('.contentCards').height();
+            
+            $('.oportuyaCardsContent').height(contentCardHeight);
 
             });
              function view() {
