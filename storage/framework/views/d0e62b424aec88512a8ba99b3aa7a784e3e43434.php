@@ -117,48 +117,29 @@
 <!--Requirements Section -->
 	<div id="requirements">
 		<div class="row requirementsContent">
-			<div class="col-md-6 contentRequirements ">
+			<div class="col-md-6 contentRequirements">
 				<img src="<?php echo e(asset('images/requirementsIcon.png')); ?>">
 				<p class="titleRequirements">
 					Requisitos
 				</p>
-				<p class="descriptionRequirements">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque dapibus tellus non viverra. Integer nec orci at urna feugiat fringilla scelerisque a mauris. Fusce ac metus ultrices, tristique leo sit amet, ornare nulla. Suspendisse feugiat justo ligula, at laoreet felis fringilla at. Ut elementum tortor ac tortor dictum ullamcorper. Vestibulum faucibus quam ut tortor eleifend aliquet. Vivamus a nulla at libero imperdiet suscipit eu in tortor
-				</p>
 				<p>
-					<a href="#" class="buttonRequirements">
-						Conoce más
+					<a href="">
+						
 					</a>
 				</p>
 			</div>
-			<div class="col-md-6 contentRequirements requirementsLine">
+			<div class="col-md-6 contentRequirements">
 				<img src="<?php echo e(asset('images/howGetIcon.png')); ?>">
 				<p class="titleRequirements">
 					Como Tenerla
 				</p>
-				<p class="descriptionRequirements">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque dapibus tellus non viverra. Integer nec orci at urna feugiat fringilla scelerisque a mauris. Fusce ac metus ultrices, tristique leo sit amet, ornare nulla. Suspendisse feugiat justo ligula, at laoreet felis fringilla at. Ut elementum tortor ac tortor dictum ullamcorper. Vestibulum faucibus quam ut tortor eleifend aliquet. Vivamus a nulla at libero imperdiet suscipit eu in tortor
-				</p>
 				<p>
-					<a href="#"  class="buttonRequirements">
-						Conoce más
+					<a href="">
+						
 					</a>
 				</p>
 			</div>
 		</div>
-	</div>
-
-<!-- Oportuya section -->
-
-	<div id="oportuyaSection">
-		<div class="oportuyaContent">
-			<div class="oportuyaContentHeader">
-				
-			</div>
-			<div class="oportuyaContentFeatures">
-				<img src="<?php echo e(asset('images/oportuyaModelo.png')); ?>">
-			</div>
-		</div>		
 	</div>
 
 <?php $__env->stopSection(); ?>
