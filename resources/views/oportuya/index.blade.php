@@ -155,12 +155,12 @@
 	<div id="oportuyaSection">
 		<div class="oportuyaContent">
 			<div class=" row oportuyaContentHeader">
-				<p class="textOportuyaHeader">
+				<p class="textOportuyaHeader oportuyaText">
 					<b class="efectiveText">
 						Avance en efectivo hasta por : <span>$ 500.000</span>
 					</b>
 					<br>	
-					<b>
+					<b class="salePoint">
 						En cualquier punto de venta Oportunidades del país 	
 					</b>					
 					<br>
@@ -168,12 +168,24 @@
 						*Aplica para tarjetas azul y negra	
 					</span>					
 				</p>	
-				<div class="col-md-3 oportuyaHeaderImage">
+				<div class="col-md-3 col-sm-3 oportuyaHeaderImage">
 					<img src="{{asset('images/tarjetaOportuyaLogo.png')}}" class="img-fluid">
 
 				</div>
-				<div class="col-md-9">
-					
+				<div class="col-sm-9 col-md-9 oportuyaTextResponsive">
+					<p class="textOportuyaHeader">
+					<b class="efectiveText">
+						Avance en efectivo hasta por : <span>$ 500.000</span>
+					</b>
+					<br>	
+					<b class="salePoint">
+						En cualquier punto de venta Oportunidades del país 	
+					</b>					
+					<br>
+					<span>
+						*Aplica para tarjetas azul y negra	
+					</span>					
+				</p>
 				</div>
 				
 			</div>
@@ -306,7 +318,7 @@
 
 			<div class="row offersDescription">	
 
-				<div class="col-md-6 col-lg-6">	
+				<div class="col-md-12 col-lg-6">	
 					<div class="offersContent">	
 						<div class="offersImageContent">
 							<div class="imageOffer">
@@ -330,7 +342,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-6">	
+				<div class="col-md-12 col-lg-6">	
 					<div class="offersContent">	
 						<div class="offersImageContent">
 							<div class="imageOffer">

@@ -488,6 +488,10 @@ a:hover, a:active, a:focus, a:visited{
 	display: none;
 }
 
+.oportuyaTextResponsive{
+	display: none;
+}
+
 /*offers section*/
 
 #offers{
@@ -1191,7 +1195,7 @@ a:hover, a:active, a:focus, a:visited{
 	}
 
 	.textOportuyaHeader{
-		width: 60%;
+		width: 100%;
 		position: absolute;
     	left: unset;
     	right: 10%;
@@ -1257,6 +1261,30 @@ a:hover, a:active, a:focus, a:visited{
 	#oportuyaCards{
 		margin-top: 2em;
 	}
+
+	.oportuyaTextResponsive{
+		display: block;
+	}
+
+	.oportuyaText{
+		display: none;
+	}
+
+	.offersDescription::before{
+		display: none;
+	}
+
+	.offersDescription>div+div{
+		margin-top: 8em;
+	}
+
+	.offersPrice1{
+		transform: translate(-9em,1.5em);
+	}
+
+	.offersPrice2{
+		transform: translate(-16em,1.5em);
+	}
 }
 
 
@@ -1301,18 +1329,54 @@ a:hover, a:active, a:focus, a:visited{
 
 	.buttonOportuyaSection{
 		    position: relative;
-    /* float: right; */
+     float: unset;
     text-align: center;
     margin: 0px 0 2em 0 !important;
     /* margin-right: 2px; */
     left: 0;
     transform: translate(0,0);
 	}
+
+	.offersPrice1{
+		transform: translate(-3em,1.5em);
+	}
+
+	.offersPrice2{
+		transform: translate(-8em,1.5em);
+	}
+
+	.textOportuyaHeader{
+		width: 100%;
+	}
+
+	.oportuyaContentHeader{
+		height: auto;
+	}
+
+	.oportuyaHeaderImage img{
+		height: auto;
+	}
+
+	.salePoint{
+		display: none;
+	}
+
+	.efectiveText{
+		font-size: 1em;
+	}
 }
 
 @media(max-width: 576px){
 	.tarjetaLAst{
 		margin-left: 0;
+	}
+
+	.offersPrice1{
+		transform: translate(0em,1.5em);
+	}
+
+	.offersPrice2{
+		transform: translate(-1em,1.5em);
 	}
 }
 
