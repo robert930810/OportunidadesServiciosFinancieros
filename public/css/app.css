@@ -242,6 +242,10 @@ a:hover, a:active, a:focus, a:visited{
     box-shadow: 2px 1px 12px 3px rgba(249,224,232,1);
 }
 
+.containImg img {
+	margin: auto;
+}
+
 
 /*Credit cards section*/
 
@@ -258,9 +262,10 @@ a:hover, a:active, a:focus, a:visited{
     transform: translate(-50%,-50px);
     left: 50%;
     background-color: #FFF;
-    width: 88em;
+    width: 80%;
     box-shadow: 2px 1px 12px 3px rgba(0,0,0,0.2);
     border-radius: 10px;
+    margin: auto;
 }
 
 .contentCards p {
@@ -369,11 +374,227 @@ a:hover, a:active, a:focus, a:visited{
 
 /*Oportuya Content*/
 
+#oportuyaSection{
+	margin-bottom: 4em;
+}
+
 .oportuyaContent{
-	width: 88em;
+	width: 80%;
+	margin: auto;
+
+}
+
+.oportuyaCardsContent{
+	width: 100%;
+}
+
+.oportuyaContentHeader{
+	background-color: #E3EEF2;
+	border-radius: 10px 10px 0 0;
+}
+
+.oportuyaHeaderImage{
+	padding: 0;
+}
+
+.textOportuyaHeader {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+}
+
+.textOportuyaHeader>span{
+	font-size: 0.8em;
+}
+
+.buttonOportuyaSection{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-6em);
+}
+
+.buttonOportuyaSection a{
+
+    background-color: #EA2163;
+    color: #FFF;
+    font-size: 1.2em;
+    padding: 0.5em 3.5em;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.contentFeatures{
+	padding-left: 4em;
+}
+
+.oportuyaContentFeatures{
+	background-color: #F4F5F4;
+	border-radius: 0 0 10px 10px;
+}
+
+
+.oportuyaContentImage img{
+	position: absolute;
+	bottom: 0;
+	right: -3em;
+}
+
+.efectiveText{
+	font-size: 1.6em;
+	text-align: center;
+}
+
+.efectiveText span {
+	font-size: 1.2em;
+	color: #005DAF;
+}
+
+
+
+.featuresfirstText{
+	margin-top: 2em;
+	font-size: 1.2em;
+	font-weight: 700;
+	margin-left: 1em;
+}
+
+.featuresfirstText + p{
+	font-weight: 800;
+	font-size: 1.2em;
+	margin-left: 2em;
+	margin-bottom: 0.4em;
+}
+
+.contentListFeatures div ul li{
+	margin-bottom: 1em;
+	height: 2em;
+	font-weight:500;
+}
+
+.soatImageContainer{
+	margin: 2em 0 1.5em 0;
+}
+
+.soatImageContainer div{
+	padding-left: 4em;
+}
+
+.contentListFeaturesResponsive{
+	display: none;
+}
+
+.responsiveButtonOportuya{
+	display: none;
+}
+
+/*offers section*/
+
+#offers{
+	background-color: #E3EEF3;
+	padding-bottom: 5em;
+}
+
+.offersTitle{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 2em 0;
+}
+
+.offersTitle p{
+	font-size: 2.5em;
+    font-weight: 700;
+    color: #2D8CCA;
+}
+
+.offersTitle p::after{
+	
+	content: " ";
+	width: 10em;
+	height: 8px;
+	background-color: #2D8CCA;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+    transform: translate(50%);
+    border-radius: 21px; 
+}
+
+.offersDescription{
+	margin-top: 10em;
+	width: 100%;
 	margin: auto;
 }
 
+.offersContent{
+	text-align: center;
+}
+
+.offersPrice1{
+	position: absolute;
+	top: 0;
+    right: 0;
+    transform: translate(-3em,1.5em);
+    color: #FFE002;
+}
+
+.offersPrice1 span{
+	position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,0);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.offersPrice2{
+	position: absolute;
+	top: 0;
+    right: 0;
+    transform: translate(-9em,1.5em);
+    color: #FFE002;
+}
+
+.offersPrice2 span{
+	position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,0);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.offersDescription::before{
+	content: " ";
+	width: 2px;
+	height: 25em;
+	background-color:#D8D8D8;
+	position: absolute;
+	right: 50%;
+    transform: translate(50%);
+     
+}
+
+.buttonOffers a{
+	position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    padding: 0.4em 2em;
+    background-color: #005CAF;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.imgOffer{
+	min-height: 280px;
+
+}
+
+.offers div.row{
+	width: 100%;
+}
 
 /* Conoce */
 
@@ -770,11 +991,28 @@ a:hover, a:active, a:focus, a:visited{
 	.conoce-button{
 		font-size: 10px;
 	}
+
+	.oportuyaContentHeader{
+		height: 6em;
+	}
+
+	.oportuyaHeaderImage img{
+		height: 100%;
+	}
 }
+
 
 @media(max-width: 1500px){
 	.sliderPrincipal-containTextBottom{
 		top: 60%;
+	}
+
+	.oportuyaSliderContent{
+		bottom: 7em;
+	}
+
+	.soatImageContainer div img{
+		width: 50%;
 	}
 }
 
@@ -786,6 +1024,15 @@ a:hover, a:active, a:focus, a:visited{
 	.conoce-button{
 		padding: 5px 10px;
 	}
+
+	.descriptionContentCard{
+		height: 3em;
+	}
+
+	.efectiveText{
+		font-size: 1.2em;
+	}
+
 }
 
 @media(max-width: 1300px){
@@ -807,6 +1054,17 @@ a:hover, a:active, a:focus, a:visited{
 	.conoce-tarjetasImg{
 		width: 24px;
 	}
+
+
+	.oportuyaSliderTitle p{
+		font-size: 2em;
+	}
+
+	.oportuyaSliderDescription p,.oportuyaSliderButton p a{
+		font-size: 1em;
+	}
+
+
 }
 
 @media(max-width: 1200px){
@@ -847,6 +1105,23 @@ a:hover, a:active, a:focus, a:visited{
 	.conoce-button {
 	    padding: 7px 30px;
 	    font-size: 15px;
+	}
+
+	.oportuyaSliderContent{
+		bottom: 5em;
+	}
+
+	.oportuyaSliderContent p{
+		margin-bottom: 0;
+	}
+
+	.titleContentCard{
+		font-size: 1.2em;
+	}
+
+	.descriptionRequirements{
+		width: 90%;
+		margin: 3em auto;
 	}
 }
 
@@ -889,6 +1164,41 @@ a:hover, a:active, a:focus, a:visited{
 	.footer-containerServicioCliente{
 		border: none;
 	}
+	.contentListFeatures{
+		display: none;
+	}
+	.contentListFeaturesResponsive{
+		display: block;
+	}
+
+	.buttonOportuyaSection{
+		position: relative;
+   		float: right;
+    	margin-top: -69px;
+   	 	margin-right: 2px;
+   	 	left: 0;
+    	transform: translate(0,0);
+	}
+
+	.oportuyaContentImage img{
+		margin-top: 14em;
+		position: relative;
+		right: 0;
+	}
+
+	.soatImageContainer div img{
+		width: 100%;
+	}
+
+	.textOportuyaHeader{
+		width: 60%;
+		position: absolute;
+    	left: unset;
+    	right: 10%;
+    	transform: translate(0);
+    	text-align: center;
+	}
+
 }
 
 
@@ -929,6 +1239,24 @@ a:hover, a:active, a:focus, a:visited{
 	.convenios-containInfo{
 		margin-bottom: 60px;
 	}
+
+	.contentCards{
+		position: relative;
+		transform: translate(0,-0);
+		left: 0;
+	}
+
+	.beforeLine::after{
+		display: none;
+	}
+
+	.contentCards{
+		height: 80em;
+	}
+
+	#oportuyaCards{
+		margin-top: 2em;
+	}
 }
 
 
@@ -949,6 +1277,36 @@ a:hover, a:active, a:focus, a:visited{
 	}
 	.conoce-containButton {
     	right: 20%;
+	}
+
+	.requirementsContent::after{
+		display: none;
+	}
+
+	.oportuyaContentImage{
+		display: none;
+	}
+
+	.soatImageContainer{
+		display: none;
+	}
+
+	.responsiveButtonOportuya{
+		display: block;
+	}
+
+	.buttonOportuya{
+		display: none;
+	}
+
+	.buttonOportuyaSection{
+		    position: relative;
+    /* float: right; */
+    text-align: center;
+    margin: 0px 0 2em 0 !important;
+    /* margin-right: 2px; */
+    left: 0;
+    transform: translate(0,0);
 	}
 }
 

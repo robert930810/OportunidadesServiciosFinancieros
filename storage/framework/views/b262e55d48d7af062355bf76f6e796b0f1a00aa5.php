@@ -5,7 +5,7 @@
 	<div id="oportuyaSlider">
 		<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="containImg">
-				<img src="images/<?php echo e($slider['img']); ?>" class="img-fluid" title="<?php echo e($slider['title']); ?>" />
+				<img src="images/<?php echo e($slider['img']); ?>" class="img-fluid img-responsive" title="<?php echo e($slider['title']); ?>" />
 				
 				<div class="oportuyaSliderContent">
 					
@@ -72,10 +72,10 @@
 <!-- Credit Card Section -->
 
 	<div id="oportuyaCards">
-		<div class="oportuyaCardsContent">
+		<div class="row oportuyaCardsContent">
 			<div class="row contentCards">
-				<div class="col-md-4 contentCreditcards beforeLine">
-					<img src="<?php echo e(asset('images/tarjetaGray.png')); ?>">
+				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards beforeLine">
+					<img src="<?php echo e(asset('images/tarjetaGray.png')); ?>" class="img-fluid">
 					<p class="titleContentCard">
 						<span>Tarjeta de crédito gray<i class="fa fa-check-square-o checkIcon"></i></span>  
 					</p>
@@ -86,8 +86,8 @@
 						<a href="" class="buttonCreditCard">Conoce más</a>
 					</p>
 				</div>
-				<div class="col-md-4 contentCreditcards beforeLine">
-					<img src="<?php echo e(asset('images/tarjetaBlue.png')); ?>">
+				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards beforeLine">
+					<img src="<?php echo e(asset('images/tarjetaBlue.png')); ?>" class="img-fluid">
 					<p class="titleContentCard">
 						<span>Tarjeta de crédito Blue<i class="fa fa-check-square-o checkIcon"></i></span>  
 					</p>
@@ -98,8 +98,8 @@
 						<a href="" class="buttonCreditCard">Conoce más</a>
 					</p>
 				</div>
-				<div class="col-md-4 contentCreditcards">
-					<img src="<?php echo e(asset('images/tarjetaBlack.png')); ?>">
+				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards">
+					<img src="<?php echo e(asset('images/tarjetaBlack.png')); ?>" class="img-fluid">
 					<p class="titleContentCard">
 						<span>Tarjeta de crédito Black<i class="fa fa-check-square-o checkIcon"></i></span>  
 					</p>
@@ -117,8 +117,8 @@
 <!--Requirements Section -->
 	<div id="requirements">
 		<div class="row requirementsContent">
-			<div class="col-md-6 contentRequirements ">
-				<img src="<?php echo e(asset('images/requirementsIcon.png')); ?>">
+			<div class="col-md-6 col-xs-12 contentRequirements ">
+				<img src="<?php echo e(asset('images/requirementsIcon.png')); ?>" class="img-responsive">
 				<p class="titleRequirements">
 					Requisitos
 				</p>
@@ -131,8 +131,8 @@
 					</a>
 				</p>
 			</div>
-			<div class="col-md-6 contentRequirements requirementsLine">
-				<img src="<?php echo e(asset('images/howGetIcon.png')); ?>">
+			<div class="col-md-6 col-xs-12 contentRequirements requirementsLine">
+				<img src="<?php echo e(asset('images/howGetIcon.png')); ?>" class="img-responsive">
 				<p class="titleRequirements">
 					Como Tenerla
 				</p>
@@ -152,13 +152,211 @@
 
 	<div id="oportuyaSection">
 		<div class="oportuyaContent">
-			<div class="oportuyaContentHeader">
+			<div class=" row oportuyaContentHeader">
+				<p class="textOportuyaHeader">
+					<b class="efectiveText">
+						Avance en efectivo hasta por : <span>$ 500.000</span>
+					</b>
+					<br>	
+					<b>
+						En cualquier punto de venta Oportunidades del país 	
+					</b>					
+					<br>
+					<span>
+						*Aplica para tarjetas azul y negra	
+					</span>					
+				</p>	
+				<div class="col-md-3 oportuyaHeaderImage">
+					<img src="<?php echo e(asset('images/tarjetaOportuyaLogo.png')); ?>" class="img-fluid">
+
+				</div>
+				<div class="col-md-9">
+					
+				</div>
 				
 			</div>
-			<div class="oportuyaContentFeatures">
-				<img src="<?php echo e(asset('images/oportuyaModelo.png')); ?>">
+			<div class="row oportuyaContentFeatures">
+
+
+				<div class=" col-md-8">
+
+					<div class="row">
+						
+						<div class="col-xl-10 contentFeatures">
+							<div>
+								<p class="featuresfirstText">El crédito para lo que más te guste</p>
+								
+								<p>Además tiene:</p>
+								
+								<div class="row contentListFeatures">
+									<div class="col-md-6">
+										<ul class="list-group">
+											<li >Descuentos especiales en 
+												<br>
+												compra de electrodomésticos
+											</li>
+											<li >
+												Crédito en establecimientos
+												<br>
+												con convenio oportuya
+											</li>
+											<li >
+												Crédito sin codeudor
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<ul class="list-group">
+											<li >
+												Cupo rotativo en productos y avances
+											</li>
+											<li >
+												Promociones permanentes
+											</li>
+											<li >
+												Historial crediticio
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class=" row contentListFeaturesResponsive">
+									<ul>	
+										<li >Descuentos especiales en 
+												<br>
+												compra de electrodomésticos
+											</li>
+											<li >
+												Crédito en establecimientos
+												<br>
+												con convenio oportuya
+											</li>
+											<li >
+												Crédito sin codeudor
+											</li>
+											<li >
+												Cupo rotativo en productos y avances
+											</li>
+											<li >
+												Promociones permanentes
+											</li>
+											<li >
+												Historial crediticio
+											</li>
+									</ul>
+								</div>
+								<div class="row">
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-2">
+							
+						</div>
+
+					</div>
+
+					<div class="row soatImageContainer">
+						<div class="col-md-9">
+							<img src="<?php echo e(asset('images/oportuyaSoat.png')); ?>" class="img-fluid">
+						</div>
+						<div class="col-md-3">
+							
+						</div>
+					</div>
+
+					<div class="row buttonOportuyaSection responsiveButtonOportuya">
+						<a href="#">
+							¡solicite la suya ahora!
+						</a>
+					</div>
+
+					
+
+
+				</div>
+
+
+				<div class=" col-md-4 contentFeatures oportuyaContentImage">
+					<img src="<?php echo e(asset('images/oportuyaModelo.png')); ?>" class="img-fluid">	
+				</div>
+				
+			</div>
+			<div class="row buttonOportuyaSection buttonOportuya">
+				<a href="#">
+					¡solicite la suya ahora!
+				</a>
 			</div>
 		</div>		
+	</div>
+
+<!-- Offers section -->
+
+	<div id="offers">
+		
+		<div class="offers">	
+
+			<div class="row">
+				<div class="offersTitle">
+					<p>	Aprovecha las super ofertas</p>	
+				</div>			
+			</div>
+
+			<div class="row offersDescription">	
+
+				<div class="col-md-6 col-lg-6">	
+					<div class="offersContent">	
+						<div class="offersImageContent">
+							<div class="imageOffer">
+								<img src="<?php echo e(asset('images/aprovechaTelevisor.png')); ?>" class="img-fluid">
+							</div>
+							<br>
+							<div class="offersPrice1">
+								<img src="<?php echo e(asset('images/aprovechaFondoPrecio.png')); ?>" class="img-fluid">
+								<span>$900.000</span>
+							</div>
+							<br>
+							<div>
+								<p>Televisor LG 43 pulgadas 43lk5700 Fhd Smart-Internet +</p>
+								<p>Microcomponente LG $2.409.900$1.199.900</p>
+							</div>
+							<p class="buttonOffers">
+								<a href="#">
+									Comprar a crédito
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6">	
+					<div class="offersContent">	
+						<div class="offersImageContent">
+							<div class="imageOffer">
+								<img src="<?php echo e(asset('images/aprovechaCelular.png')); ?>" class="img-fluid">	
+							</div>							
+							<br>
+							<div class="offersPrice2">
+								<img src="<?php echo e(asset('images/aprovechaFondoPrecio.png')); ?>" class="img-fluid">
+								<span>$999.000</span>
+							</div>
+							<br>
+							<div>
+								<p>Celular Q6 Prime LGM700F.ACOLPL</p>
+								<p>LG $899.900$519.900</p>
+							</div>
+							<p class="buttonOffers">
+								<a href="#">
+									Comprar a crédito
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>	
+
+		</div>	
+		
 	</div>
 
 <?php $__env->stopSection(); ?>
