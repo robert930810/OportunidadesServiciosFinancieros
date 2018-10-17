@@ -83,7 +83,7 @@
 						Con tu tarjeta oportuya tienes avance de efectivo hasta $500.000
 					</p>
 					<p class="buttonCard">
-						<a href="" class="buttonCreditCard">Conoce más</a>
+						<a href="" class="buttonCreditCard" data-toggle="modal" data-target="#tarjetaGrayModal">Conoce más</a>
 					</p>
 				</div>
 				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards beforeLine">
@@ -95,7 +95,7 @@
 						¿Aún no la tienes? ¡Pidela ya!
 					</p>
 					<p  class="buttonCard">
-						<a href="" class="buttonCreditCard">Conoce más</a>
+						<a href="" class="buttonCreditCard" data-toggle="modal" data-target="#tarjetaBlueModal">Conoce más</a>
 					</p>
 				</div>
 				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards">
@@ -107,14 +107,167 @@
 						Ofertas especiales permanentes
 					</p>
 					<p class="buttonCard">
-						<a href="" class="buttonCreditCard">Conoce más</a>
+						<a href="" class="buttonCreditCard" data-toggle="modal" data-target="#tarjetaBlackModal">Conoce más</a>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
+<!-- tarjeta Gray Modal -->
+
+<div class="modal fade hide" id="tarjetaGrayModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4>tarjeta de crédito Gray</h4>
+			</div>
+
+			<div class="modal-body">
+				
+				<form role=form method="POST" action="">
+					<input type="hidden" name="tipoTarjeta" value="gray">
+					<div class="form-group">
+						<label class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Apellidos</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Correo electronico</label>
+						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Teléfono</label>
+						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">
+							Guardar
+						</button>
+						<button type="button" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">
+							Cerrar
+						</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>
+
+
+<!-- tarjeta Blue Modal -->
+	
+<div class="modal fade hide" id="tarjetaBlueModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4>tarjeta de crédito Gray</h4>
+			</div>
+
+			<div class="modal-body">
+				
+				<form role=form method="POST" action="">
+					<input type="hidden" name="tipoTarjeta" value="blue">
+					<div class="form-group">
+						<label class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Apellidos</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Correo electronico</label>
+						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Teléfono</label>
+						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">
+							Guardar
+						</button>
+						<button type="button" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">
+							Cerrar
+						</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>
+
+<!-- tarjeta Black Modal -->
+	
+<div class="modal fade hide" id="tarjetaBlackModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4>tarjeta de crédito Gray</h4>
+			</div>
+
+			<div class="modal-body">
+				
+				<form role=form method="POST" action="">
+					<input type="hidden" name="tipoTarjeta" value="black">
+					<div class="form-group">
+						<label class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Apellidos</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Correo electronico</label>
+						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Teléfono</label>
+						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">
+							Guardar
+						</button>
+						<button type="button" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">
+							Cerrar
+						</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>
+
+
 <!--Requirements Section -->
+
 	<div id="requirements">
 		<div class="row requirementsContent">
 			<div class="col-md-6 col-xs-12 contentRequirements ">
@@ -126,7 +279,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque dapibus tellus non viverra. Integer nec orci at urna feugiat fringilla scelerisque a mauris. Fusce ac metus ultrices, tristique leo sit amet, ornare nulla. Suspendisse feugiat justo ligula, at laoreet felis fringilla at. Ut elementum tortor ac tortor dictum ullamcorper. Vestibulum faucibus quam ut tortor eleifend aliquet. Vivamus a nulla at libero imperdiet suscipit eu in tortor
 				</p>
 				<p>
-					<a href="#" class="buttonRequirements">
+					<a href="" class="buttonRequirements" data-toggle="modal" data-target="#requirementsModal">
 						Conoce más
 					</a>
 				</p>
@@ -140,13 +293,62 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque dapibus tellus non viverra. Integer nec orci at urna feugiat fringilla scelerisque a mauris. Fusce ac metus ultrices, tristique leo sit amet, ornare nulla. Suspendisse feugiat justo ligula, at laoreet felis fringilla at. Ut elementum tortor ac tortor dictum ullamcorper. Vestibulum faucibus quam ut tortor eleifend aliquet. Vivamus a nulla at libero imperdiet suscipit eu in tortor
 				</p>
 				<p>
-					<a href="#"  class="buttonRequirements">
+					<a href="" class="buttonRequirements" data-toggle="modal" data-target="#requirementsModal">
 						Conoce más
 					</a>
 				</p>
 			</div>
 		</div>
 	</div>
+
+<!-- Requirements Modal -->
+	
+<div class="modal fade hide" id="requirementsModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4>tarjeta de crédito Gray</h4>
+			</div>
+
+			<div class="modal-body">
+				
+				<form role=form method="POST" action="">
+					<div class="form-group">
+						<label class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Apellidos</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Correo electronico</label>
+						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Teléfono</label>
+						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">
+							Guardar
+						</button>
+						<button type="button" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">
+							Cerrar
+						</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>
 
 <!-- Oportuya section -->
 
@@ -295,12 +497,64 @@
 				
 			</div>
 			<div class="row buttonOportuyaSection buttonOportuya">
-				<a href="#">
+				<a href="" data-toggle="modal" data-target="#oportuyaModal">
 					¡solicite la suya ahora!
 				</a>
 			</div>
 		</div>		
 	</div>
+
+
+
+<!-- oportuya Modal -->
+	
+<div class="modal fade hide" id="oportuyaModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+	<div class="modal-dialog">
+		
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4>tarjeta de crédito Gray</h4>
+			</div>
+
+			<div class="modal-body">
+				
+				<form role=form method="POST" action="">
+					<div class="form-group">
+						<label class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Apellidos</label>
+						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Correo electronico</label>
+						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<label class="control-label">Teléfono</label>
+						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">
+							Guardar
+						</button>
+						<button type="button" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">
+							Cerrar
+						</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>
+
 
 <!-- Offers section -->
 
