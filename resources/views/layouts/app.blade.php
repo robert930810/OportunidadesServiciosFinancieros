@@ -132,10 +132,9 @@
         
         <script src="{{ asset('editor/contentbuilder/jquery-ui.min.js')}}" type="text/javascript"></script>
         <script src="{{ asset('editor/contentbuilder/contentbuilder.js')}}" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="{{ asset('js/libranza.js') }}"></script>
         <link href="{{ asset('editor/contentbuilder/contentbuilder.css')}}" rel="stylesheet" type="text/css" />
-        
-   
-
         <script type="text/javascript">
         
             jQuery(document).ready(function ($) {

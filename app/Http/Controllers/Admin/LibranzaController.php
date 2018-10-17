@@ -84,4 +84,10 @@ class LibranzaController extends Controller
     {
         //
     }
+
+
+    public function test($request){
+        $array = [1,2,3,4,5,6,7];
+        return response()->json($array);
+    }
 }

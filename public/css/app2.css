@@ -1,0 +1,66 @@
+/* Credito Libranza */
+.creditoLibranza-title, .formularioSimulador-title{
+	color: #348dc7;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 60px 0;
+	position: relative;
+}
+
+.creditoLibranza-title > strong, .formularioSimulador-title > strong{
+	font-weight: 700;
+}
+
+.creditoLibranza-title:before{
+	background: #348dc7;
+	border-radius: 70px;
+	bottom: -14px;
+	content: "";
+	height: 4px;
+	left: 42%;
+	position: absolute;
+	width: 15%;
+}
+
+.creditoLibranza-contianerTexto{
+	padding: 30px 0 0 100px;
+}
+
+.creditoLibranza-img{
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.creditoLibranza-titleText{
+	color: #348dc7;
+	font-size: 18px;
+}
+
+.creditoLibranza-text{
+    font-size: 15px;
+    line-height: 20px;
+	padding: 0 40px 0 0;
+    text-align: justify;
+}
+
+/* Fomulario */
+#formularioSimulador{
+	background: #f5f5f5;
+	padding: 10px 0 0 0;
+}
+
+.formularioSimulador-title{
+	color: #348dc7;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 60px 0;
+	position: relative;
+}
+
+/* Credibilidad */
+
+.credibilidad-text{
+	color: #348dc7;
+	font-weight: bold;
+}

@@ -52,4 +52,4 @@ Route::resource('oportuya','Admin\OportuyaController');
 Route::resource('libranza','Admin\LibranzaController');
 
 
-
+Route::get('api/libranza/test/{precio1}', 'Admin\LibranzaController@test');
