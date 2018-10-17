@@ -1,5 +1,5 @@
 /* Credito Libranza */
-.creditoLibranza-title, .formularioSimulador-title{
+.creditoLibranza-title{
 	color: #348dc7;
 	font-size: 20px;
 	font-weight: 300;
@@ -7,7 +7,7 @@
 	position: relative;
 }
 
-.creditoLibranza-title > strong, .formularioSimulador-title > strong{
+.creditoLibranza-title > strong{
 	font-weight: 700;
 }
 
@@ -47,15 +47,57 @@
 /* Fomulario */
 #formularioSimulador{
 	background: #f5f5f5;
-	padding: 10px 0 0 0;
+	padding: 10px 0 40px 0;
+}
+
+.containerFormulario{
+	margin: auto;
+	max-width: 865px;
 }
 
 .formularioSimulador-title{
 	color: #348dc7;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 300;
-	margin: 60px 0;
 	position: relative;
+}
+
+.formularioSimulador-title > strong{
+	font-weight: 700;
+}
+
+.formularioSimulador-title:before{
+	background: #348dc7;
+	border-radius: 70px;
+	bottom: -14px;
+	content: "";
+	height: 4px;
+	left: 39%;
+	position: absolute;
+	width: 22%;
+}
+
+.formularioSimulador-textPrincipal{
+	margin: 30px 0 20px 0;
+    line-height: 20px;
+    font-size: 17px;
+}
+
+.formularioSimulador-labelFormulario{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.formularioSimulador-buttonForm{
+	background: #1a59a0;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 60px;
+}
+
+.formularioSimulador-textInferior{
+	font-size: 14px;
 }
 
 /* Credibilidad */
