@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 namespace App\Http\Controllers\Admin;
 
@@ -85,6 +85,10 @@ class LibranzaController extends Controller
         //
     }
 
+    public function simulator(){
+
+        return view('libranza.liquidator');
+    }
 
     public function test($request){
         $array = [1,2,3,4,5,6,7];

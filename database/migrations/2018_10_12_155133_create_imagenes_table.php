@@ -19,7 +19,11 @@ class CreateImagenesTable extends Migration
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('textButton')->nullable();
+            $table->integer('category')->nullable()->unsigned();
+            $table->binary('isSlider')->nullable();
+            $table->foreign('category')->references('id')->on('images_category');
         });
+
     }
 
     /**
