@@ -53,3 +53,5 @@ Route::resource('libranza','Admin\LibranzaController');
 
 
 Route::get('api/libranza/test/{precio1}', 'Admin\LibranzaController@test');
+Route::get('api/libranza/liquidator/{maxAmount}/{quota}', 'Admin\LibranzaController@liquidator');
+
