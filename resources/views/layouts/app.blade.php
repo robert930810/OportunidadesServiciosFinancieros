@@ -60,7 +60,7 @@
                             <div class="navbar-nav header-menu">
                                 <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
                                 <a class="nav-item nav-link header-item header-item2" href="#"> <span class="header-textoItem">Crédito motos</span></a>
-                                <a class="nav-item nav-link header-item header-item3" href="#"> <span class="header-textoItem">Crédito libranza</span></a>
+                                <a class="nav-item nav-link header-item header-item3" href="/libranza"> <span class="header-textoItem">Crédito libranza</span></a>
                                 <a class="nav-item nav-link header-item header-item4" href="#"> <span class="header-textoItem">Seguros</span></a>
                                 <a class="nav-item nav-link header-item header-item5" href="#"> <span class="header-textoItem">Viajes</span></a>
                             </div>
@@ -178,6 +178,21 @@
         });
 
         $('#oportuyaSlider').slick({
+            autoplay: true,
+            autoplaySpeed: 15000,
+            nextArrow: '<i class="fa fa-chevron-left slideNext"></i>',
+            prevArrow: '<i class="fa fa-chevron-right slidePrev"></i>',
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    }
+                }
+            ]
+        });
+
+        $('#sliderPrincipalLibranza').slick({
             autoplay: true,
             autoplaySpeed: 15000,
             nextArrow: '<i class="fa fa-chevron-left slideNext"></i>',

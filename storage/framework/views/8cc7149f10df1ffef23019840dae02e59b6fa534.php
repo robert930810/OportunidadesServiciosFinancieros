@@ -13,6 +13,7 @@
     <link href="<?php echo e(asset('editor/contentbuilder/codemirror/lib/codemirror.css')); ?>" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo e(asset('js/slick.min.js')); ?>"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link href="<?php echo e(asset('editor/contentbuilder/contentbuilder.css')); ?>" rel="stylesheet" type="text/css" /> 
    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -60,7 +61,7 @@
                             <div class="navbar-nav header-menu">
                                 <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
                                 <a class="nav-item nav-link header-item header-item2" href="#"> <span class="header-textoItem">Crédito motos</span></a>
-                                <a class="nav-item nav-link header-item header-item3" href="#"> <span class="header-textoItem">Crédito libranza</span></a>
+                                <a class="nav-item nav-link header-item header-item3" href="/libranza"> <span class="header-textoItem">Crédito libranza</span></a>
                                 <a class="nav-item nav-link header-item header-item4" href="#"> <span class="header-textoItem">Seguros</span></a>
                                 <a class="nav-item nav-link header-item header-item5" href="#"> <span class="header-textoItem">Viajes</span></a>
                             </div>
@@ -178,6 +179,21 @@
         });
 
         $('#oportuyaSlider').slick({
+            autoplay: true,
+            autoplaySpeed: 15000,
+            nextArrow: '<i class="fa fa-chevron-left slideNext"></i>',
+            prevArrow: '<i class="fa fa-chevron-right slidePrev"></i>',
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    }
+                }
+            ]
+        });
+
+        $('#sliderPrincipalLibranza').slick({
             autoplay: true,
             autoplaySpeed: 15000,
             nextArrow: '<i class="fa fa-chevron-left slideNext"></i>',

@@ -1,22 +1,20 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div ng-app="appLibranzaLiquidador" ng-controller="libranzaLiquidadorCtrl">
 	<div id="sliderPrincipalLibranza">
-		@foreach($images as $slider)
+		<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 			<div class="containImg">
-				<img src="images/{{ $slider['img'] }}" class="img-fluid img-responsive" title="{{ $slider['title'] }}" />
+				<img src="images/<?php echo e($slider['img']); ?>" class="img-fluid img-responsive" title="<?php echo e($slider['title']); ?>" />
 				<div class="sliderPrincipal-containTextLeft">
 					<p class="sliderPrincipalLibranza-text">
-						@php
+						<?php
 							echo $slider['description'];
-						@endphp
+						?>
 					</p>
 
-					<a href="#formularioSimulador" class="sliderPrincipalLibranza-button">@php echo $slider['textButton']; @endphp</a>
+					<a href="#formularioSimulador" class="sliderPrincipalLibranza-button"><?php echo $slider['textButton']; ?></a>
 				</div>
 			</div>
-		@endforeach
+		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 	</div>
 
 
@@ -25,7 +23,7 @@
 			<h2 class="creditoLibranza-title text-center">Todo lo que puedes hacer con <br> nuestro <strong>crédito de libranza</strong></h2>
 			<div class="row">
 				<div class="col-md-12 col-lg-4 creditoLibranza-contianerTexto">
-					<img src="{{ asset('images/libranza-creditoElectrodomestico.png') }}" alt="Crédito para electrodomésticos" class="img-fluid creditoLibranza-img">
+					<img src="<?php echo e(asset('images/libranza-creditoElectrodomestico.png')); ?>" alt="Crédito para electrodomésticos" class="img-fluid creditoLibranza-img">
 					<h3 class="creditoLibranza-titleText">Crédito para <br> electrodomésticos</h3>
 					<p class="creditoLibranza-text">
 						A través de nuestras tiendas Oportunidades a nivel nacional, Te financiamos hasta por 60 meses en el electrodoméstico que tanto quieres. <br>
@@ -33,7 +31,7 @@
 					</p>
 				</div>
 				<div class="col-md-12 col-lg-4 creditoLibranza-contianerTexto">
-					<img src="{{ asset('images/libranza-creditoMotos.png') }}" alt="Crédito para motos" class="img-fluid creditoLibranza-img">
+					<img src="<?php echo e(asset('images/libranza-creditoMotos.png')); ?>" alt="Crédito para motos" class="img-fluid creditoLibranza-img">
 					<h3 class="creditoLibranza-titleText">Crédito <br> para motos</h3>
 					<p class="creditoLibranza-text">
 						Accede a la moto que quieres a través de nuestras líneas de crédito que se adaptan a tus posibilidades de pago. te damos hasta 108 mese para que te la lleves. <br>
@@ -41,7 +39,7 @@
 					</p>
 				</div>
 				<div class="col-md-12 col-lg-4 creditoLibranza-contianerTexto">
-					<img src="{{ asset('images/libranza-creditoViajes.png') }}" alt="Crédito para viajes" class="img-fluid creditoLibranza-img">
+					<img src="<?php echo e(asset('images/libranza-creditoViajes.png')); ?>" alt="Crédito para viajes" class="img-fluid creditoLibranza-img">
 					<h3 class="creditoLibranza-titleText">Crédito <br> para viajes</h3>
 					<p class="creditoLibranza-text">
 						Ahora puedes viajar por el mundo financiando tus paquetes turísticos nacionales hasta por 24 meses e internacionales hasta por 48 meses. <br>
@@ -124,21 +122,21 @@
 			<h2 class="credibilidad-title text-center">Experiencia <strong>Credibilidad</strong></h2>
 			<div class="row">
 				<div class="col-md-12 col-lg-4 text-center">
-					<img src="{{ asset('images/libranza-experienciaMapa.png') }}" alt="" class="img-fluid credibilidad-img">
+					<img src="<?php echo e(asset('images/libranza-experienciaMapa.png')); ?>" alt="" class="img-fluid credibilidad-img">
 					<p class="credibilidad-text ">
 						56 puntos de atención  <br>
 						al público
 					</p>
 				</div>
 				<div class="col-md-12 col-lg-4 text-center">
-					<img src="{{ asset('images/libranza-experienciaAliados.png') }}" alt="" class="img-fluid credibilidad-img">
+					<img src="<?php echo e(asset('images/libranza-experienciaAliados.png')); ?>" alt="" class="img-fluid credibilidad-img">
 					<p class="credibilidad-text ">
 						Más de 40 Aliados estratégicos <br>
 						en todo el territorio nacional
 					</p>
 				</div>
 				<div class="col-md-12 col-lg-4 text-center">
-					<img src="{{ asset('images/libranza-experienciaClientes.png') }}" alt="" class="img-fluid credibilidad-img">
+					<img src="<?php echo e(asset('images/libranza-experienciaClientes.png')); ?>" alt="" class="img-fluid credibilidad-img">
 					<p class="credibilidad-text ">
 						Más de 500.000 clientes <br>
 						atendidos en los últimos 5 años
@@ -163,8 +161,8 @@
 							</thead>
 							<tbody>
 								<tr ng-repeat="plazo in plazos">
-									<td>@{{ plazo.amount }}</td>
-									<td>@{{ plazo.timeLimit }}</td>
+									<td>{{ plazo.amount }}</td>
+									<td>{{ plazo.timeLimit }}</td>
 								</tr>
 							</tbody>
 						</table>
@@ -212,4 +210,5 @@
 		</div>
 	</div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

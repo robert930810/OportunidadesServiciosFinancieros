@@ -1,5 +1,25 @@
+/* Slider */
+.sliderPrincipalLibranza-text{
+	font-size: 25px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.sliderPrincipalLibranza-text > strong{
+	font-weight: 700;
+}
+
+.sliderPrincipalLibranza-button{
+	background: #1a59a0;
+	border-radius: 20px;
+	color: #fff !important;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 10px 40px;
+}
+
 /* Credito Libranza */
-.creditoLibranza-title{
+.creditoLibranza-title, .credibilidad-title{
 	color: #348dc7;
 	font-size: 20px;
 	font-weight: 300;
@@ -7,7 +27,7 @@
 	position: relative;
 }
 
-.creditoLibranza-title > strong{
+.creditoLibranza-title > strong, .credibilidad-title > strong{
 	font-weight: 700;
 }
 
@@ -105,4 +125,15 @@
 .credibilidad-text{
 	color: #348dc7;
 	font-weight: bold;
+}
+
+.credibilidad-title:before{
+	background: #348dc7;
+	border-radius: 70px;
+	bottom: -14px;
+	content: "";
+	height: 4px;
+	left: 42%;
+	position: absolute;
+	width: 15%;
 }

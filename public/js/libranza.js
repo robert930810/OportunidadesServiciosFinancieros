@@ -10,6 +10,16 @@ angular.module('appLibranzaLiquidador', [])
 			value: 'Libre inversion + Compra de cartera'
 		}
 	];
+	$scope.tipoCliente = [
+		{
+			label : 'Pensionado',
+			value : 'Pensionado'
+		},
+		{
+			label : 'Docente',
+			value : 'Docente'
+		}
+	];
 	$scope.pagadurias = [
 		{label: 'ACALDIA DE IBAGUE',
 		value: 'ACALDIA DE IBAGUE'},
@@ -71,18 +81,46 @@ angular.module('appLibranzaLiquidador', [])
 	$scope.libranza = {
 		lineaCredito: 'Libre inversion',
 		pagaduria : 'COLPENSIONES',
+		tipoCliente: 'Pensionado',
+		edad : 18,
 		salarioBasico : 0,
 		descuentosLey : 0,
 		otrosDescuentos : 0,
 		margenSeguridad : 0,
 		coutaCompra : 0,
-		cupoDisponible : 0
+		cupoDisponible : 0,
+		montoMaximo : 0
 	};
 
 	$scope.calculateData = function(){
 		$scope.libranza.descuentosLey = $scope.libranza.salarioBasico * 0.12;
 		$scope.libranza.margenSeguridad = ($scope.libranza.salarioBasico > 781242) ? 5300 : 2000 ;
 		$scope.libranza.cupoDisponible = (($scope.libranza.salarioBasico - $scope.libranza.descuentosLey)/2)-$scope.libranza.otrosDescuentos-$scope.libranza.margenSeguridad-$scope.libranza.coutaCompra;
+		if($scope.libranza.edad >= 18 && $scope.libranza.edad < 80){
+			$scope.libranza.montoMaximo = 60000000;
+		}else if($scope.libranza.edad >= 80 && $scope.libranza.edad < 86){
+			$scope.libranza.montoMaximo = 9000000;
+		}else{
+			$scope.libranza.montoMaximo = 5000000;
+		}
+		console.log($scope.libranza.montoMaximo);
+	};
+
+	$scope.simular = function(){
+		if($scope.libranza.cupoDisponible <= 148518 ){
+			alert("No posee capacidad de pago");
+		}else{
+			if($scope.libranza.salarioBasico < 0 || $scope.libranza.salarioBasico == ''){
+				alert("Para poder simular el Salario Básico no puede ser menor a 0");
+			}else{
+				$('#simularModal').modal('show');
+			}
+		}
+	};
+
+	$scope.solicitar = function(){
+		$('#simularModal').modal('hide');
+		$('#solicitarModal').modal('show');
 	};
 
 	$scope.test = function(){
@@ -94,5 +132,5 @@ angular.module('appLibranzaLiquidador', [])
 		}, function errorCallback(response) {
 		    console.log(response);
 		});
-	}
+	};
 });
