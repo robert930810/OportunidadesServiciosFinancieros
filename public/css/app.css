@@ -1203,6 +1203,23 @@ a:hover, a:active, a:focus, a:visited{
     	text-align: center;
 	}
 
+	.header-menu:before{
+		display: none;
+	}
+
+	.header-menu button.navbar-toggler{
+		margin-left: 50%;
+   		transform: translate(-50%);
+	} 
+
+	.toggleResponsive{
+		background-color: #F5F4FE;
+	}
+
+	.header-item{
+		width: 100%;
+	}
+
 }
 
 
