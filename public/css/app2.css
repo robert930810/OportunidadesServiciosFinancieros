@@ -137,3 +137,12 @@
 	position: absolute;
 	width: 15%;
 }
+
+/* Modal Simular */
+.simularModal-modalBody{
+	padding: 0 0 20px 0;
+}
+.simularModal-thead{
+	background: #1a59a0;
+	color: #fff;
+}

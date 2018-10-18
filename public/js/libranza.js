@@ -79,41 +79,55 @@ angular.module('appLibranzaLiquidador', [])
 		value: 'SEGUROS DE VIDA SURAMEICANA'}
 	]
 	$scope.libranza = {
-		lineaCredito: 'Libre inversion',
+		creditLine: 'Libre inversion',
 		pagaduria : 'COLPENSIONES',
-		tipoCliente: 'Pensionado',
-		edad : 18,
-		salarioBasico : 0,
-		descuentosLey : 0,
-		otrosDescuentos : 0,
-		margenSeguridad : 0,
-		coutaCompra : 0,
-		cupoDisponible : 0,
-		montoMaximo : 0
+		customerType: 'Pensionado',
+		age : 18,
+		salary : 0,
+		lawDesc : 0,
+		otherDesc : 0,
+		segMargen : 0,
+		quotaBuy : 0,
+		quaotaAvailable : 0,
+		maxQuota : 0,
+		name : '',
+		lastName : '',
+		email: '',
+		telephone: '',
+		city: '',
+		typeService: 'Credito libranza',
+		typeProduct: 'Credito libranza'
 	};
 
 	$scope.calculateData = function(){
-		$scope.libranza.descuentosLey = $scope.libranza.salarioBasico * 0.12;
-		$scope.libranza.margenSeguridad = ($scope.libranza.salarioBasico > 781242) ? 5300 : 2000 ;
-		$scope.libranza.cupoDisponible = (($scope.libranza.salarioBasico - $scope.libranza.descuentosLey)/2)-$scope.libranza.otrosDescuentos-$scope.libranza.margenSeguridad-$scope.libranza.coutaCompra;
-		if($scope.libranza.edad >= 18 && $scope.libranza.edad < 80){
-			$scope.libranza.montoMaximo = 60000000;
-		}else if($scope.libranza.edad >= 80 && $scope.libranza.edad < 86){
-			$scope.libranza.montoMaximo = 9000000;
+		$scope.libranza.lawDesc = $scope.libranza.salary * 0.12;
+		$scope.libranza.segMargen = ($scope.libranza.salary > 781242) ? 5300 : 2000 ;
+		$scope.libranza.quaotaAvailable = (($scope.libranza.salary - $scope.libranza.lawDesc)/2)-$scope.libranza.otherDesc-$scope.libranza.segMargen-$scope.libranza.quotaBuy;
+		if($scope.libranza.age >= 18 && $scope.libranza.age < 80){
+			$scope.libranza.maxQuota = 60000000;
+		}else if($scope.libranza.age >= 80 && $scope.libranza.age < 86){
+			$scope.libranza.maxQuota = 9000000;
 		}else{
-			$scope.libranza.montoMaximo = 5000000;
+			$scope.libranza.maxQuota = 5000000;
 		}
-		console.log($scope.libranza.montoMaximo);
 	};
 
 	$scope.simular = function(){
-		if($scope.libranza.cupoDisponible <= 148518 ){
+		if($scope.libranza.quaotaAvailable <= 148518 ){
 			alert("No posee capacidad de pago");
 		}else{
-			if($scope.libranza.salarioBasico < 0 || $scope.libranza.salarioBasico == ''){
+			if($scope.libranza.salary < 0 || $scope.libranza.salary == ''){
 				alert("Para poder simular el Salario Básico no puede ser menor a 0");
 			}else{
-				$('#simularModal').modal('show');
+				$http({
+				  method: 'GET',
+				  url: 'api/libranza/liquidator/'+$scope.libranza.maxQuota+'/'+$scope.libranza.quaotaAvailable
+				}).then(function successCallback(response) {
+					$scope.plazos = response.data;
+				   	$('#simularModal').modal('show');
+				}, function errorCallback(response) {
+				    
+				});
 			}
 		}
 	};
@@ -123,14 +137,15 @@ angular.module('appLibranzaLiquidador', [])
 		$('#solicitarModal').modal('show');
 	};
 
-	$scope.test = function(){
+	$scope.addLead = function(){
 		$http({
-		  method: 'GET',
-		  url: 'api/libranza/test/'+10000
+		  method: 'POST',
+		  url: '/libranza',
+		  data: $scope.libranza
 		}).then(function successCallback(response) {
-		    console.log(response);
+			console.log(response.data);
 		}, function errorCallback(response) {
-		    console.log(response);
+		    
 		});
 	};
 });
