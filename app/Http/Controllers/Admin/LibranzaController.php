@@ -1,8 +1,8 @@
- <?php
+<?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Imagenes;
+use App\Fee;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -85,10 +85,46 @@ class LibranzaController extends Controller
         //
     }
 
-    public function simulator(){
+    public function liquidator($maxAmount,$quota){  
 
-        return view('libranza.liquidator');
+
+        $maxAmountQuota=$maxAmount-$quota;
+
+        $timeLimits=[13,18,24,36,48,60,72,84,96,108];
+        
+
+        $arrayFeesId=array();
+        $arrayAmount=array();  
+        $arrayResult=array();              
+            
+        $i=0;
+        for($i;$i<count($timeLimits);$i++){
+            $arrayFeesId[$i]=Fee::selectRaw("max(id) as idAmount")
+                            ->where('fee','<',$quota)
+                            ->where('timeLimit','=',$timeLimits[$i])
+                            ->get();
+        }
+        
+        $j=0;
+        for($j;$j<count($arrayFeesId);$j++){
+            $arrayAmount[$j]=Fee::selectRaw('timeLimit,amount')
+                            ->where('id','=',$arrayFeesId[$j][0]->idAmount)
+                            ->get();
+        }
+        
+        $k=0;
+        for($k;$k<count($arrayAmount);$k++){
+                if(($maxAmount-$arrayAmount[$k][0]->amount) < 0){
+                        $arrayResult[$k]=0;
+                }else{
+                    $arrayResult[$k]=$arrayAmount[$k][0];
+                }
+
+        }
+
+        return response()->json($arrayResult);
     }
+
 
     public function test($request){
         $array = [1,2,3,4,5,6,7];
