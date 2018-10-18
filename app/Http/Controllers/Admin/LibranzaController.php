@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 use App\Imagenes;
 use App\Fee;
+use App\Lead;
+use App\Liquidator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -37,7 +39,26 @@ class LibranzaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lead= new Lead;
+        $liquidator = new Liquidator;
+
+        $lead->name=$request->get('name');
+        $lead->lastName=$request->get('lastName');
+        $lead->email=$request->get('email');
+        $lead->telephone=$request->get('telephone');
+        $lead->city=$request->get('city');
+        $lead->typeService=$request->get('typeService');
+        $lead->typeProduct=$request->get('typeProduct');
+
+        $lead->save();
+
+        $liquidator->creditLine = $request->get('creditLine');
+        $liquidator->pagaduria = $request->get('pagaduria');
+        $liquidator->age = $request->get('age');
+        $liquidator->customerType = $request->get('customerType');
+        $liquidator->salary = $request->get('salary');
+        $liquidator->idLead = 13;
+        $liquidator->save();
     }
 
     /**
@@ -115,7 +136,6 @@ class LibranzaController extends Controller
         $k=0;
         for($k;$k<count($arrayAmount);$k++){
                 if(($maxAmount-$arrayAmount[$k][0]->amount) < 0){
-                        $arrayResult[$k]=0;
                 }else{
                     $arrayResult[$k]=$arrayAmount[$k][0];
                 }

@@ -61,8 +61,8 @@
 			</p>
 			<form ng-submit="simular()">
 				<div class="form-group">
-					<label class="formularioSimulador-labelFormulario" for="lineaCredito">Linea de Crédito :</label>
-					<select id="lineaCredito" class="form-control" ng-model="libranza.lineaCredito" ng-options="linea.value as linea.label for linea in lineaCredito"></select>
+					<label class="formularioSimulador-labelFormulario" for="creditLine">Linea de Crédito :</label>
+					<select id="creditLine" class="form-control" ng-model="libranza.creditLine" ng-options="linea.value as linea.label for linea in lineaCredito"></select>
 				</div>
 				<div class="form-group">
 					<label class="formularioSimulador-labelFormulario" for="pagaduria">Pagaduría :</label>
@@ -71,39 +71,39 @@
 				<div class="row">
 					<div class="col-sm-12 col-md-2">
 						<div class="form-group">
-							<label for="edad" class="formularioSimulador-labelFormulario">Edad :</label>
-							<input type="number" class="form-control" id="edad" ng-model="libranza.edad" ng-blur="calculateData()">
+							<label for="age" class="formularioSimulador-labelFormulario">Edad :</label>
+							<input type="number" class="form-control" id="age" ng-model="libranza.age" ng-blur="calculateData()">
 						</div>
 					</div>
 					<div class="col-sm-12 col-md-10">
 						<div class="form-group">
-							<label for="tipoCliente" class="formularioSimulador-labelFormulario">Tipo de Cliente :</label>
-							<select class="form-control" id="tipoCliente" ng-model="libranza.tipoCliente" ng-options="tipo.value as tipo.label for tipo in tipoCliente"></select>
+							<label for="customerType" class="formularioSimulador-labelFormulario">Tipo de Cliente :</label>
+							<select class="form-control" id="customerType" ng-model="libranza.customerType" ng-options="tipo.value as tipo.label for tipo in tipoCliente"></select>
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="salarioBasico" class="formularioSimulador-labelFormulario">Salario Básico :</label>
-					<input type="text" id="salarioBasico" class="form-control" ng-model="libranza.salarioBasico" ng-blur="calculateData()">
+					<label for="salary" class="formularioSimulador-labelFormulario">Salario Básico :</label>
+					<input type="text" id="salary" class="form-control" ng-model="libranza.salary" ng-blur="calculateData()">
 				</div>
 				<div class="form-group">
-					<label for="descuentosLey" class="formularioSimulador-labelFormulario">Descuentos de ley :</label>
-					<input type="text" id="descuentosLey" class="form-control" ng-model="libranza.descuentosLey" ng-disabled="true">
+					<label for="lawDesc" class="formularioSimulador-labelFormulario">Descuentos de ley :</label>
+					<input type="text" id="lawDesc" class="form-control" ng-model="libranza.lawDesc" ng-disabled="true">
 				</div>
 				<div class="form-group">
-					<label for="otrosDescuentos" class="formularioSimulador-labelFormulario">Otros Descuentos :</label>
-					<input type="text" id="otrosDescuentos" class="form-control" ng-model="libranza.otrosDescuentos" ng-blur="calculateData()" >
+					<label for="otherDesc" class="formularioSimulador-labelFormulario">Otros Descuentos :</label>
+					<input type="text" id="otherDesc" class="form-control" ng-model="libranza.otherDesc" ng-blur="calculateData()" >
 				</div>
 				<div class="form-group">
-					<input type="hidden" id="margenSeguridad" class="form-control" ng-model="libranza.margenSeguridad">
+					<input type="hidden" id="segMargen" class="form-control" ng-model="libranza.segMargen">
 				</div>
 				<div class="form-group" ng-if="libranza.lineaCredito == 'Libre inversion + Compra de cartera'">
-					<label for="coutaCompra" class="formularioSimulador-labelFormulario">Valor Cuota Compra :</label>
-					<input type="text" id="coutaCompra" class="form-control" ng-model="libranza.coutaCompra" ng-blur="calculateData()" />
+					<label for="quotaBuy" class="formularioSimulador-labelFormulario">Valor Cuota Compra :</label>
+					<input type="text" id="quotaBuy" class="form-control" ng-model="libranza.quotaBuy" ng-blur="calculateData()" />
 				</div>
 				<div class="form-group">
-					<label for="cupoDisponible" class="formularioSimulador-labelFormulario">Cupo disponible :</label>
-					<input type="text" id="cupoDisponible" class="form-control" ng-model="libranza.cupoDisponible" ng-disabled="true"/>
+					<label for="quaotaAvailable" class="formularioSimulador-labelFormulario">Cupo disponible :</label>
+					<input type="text" id="quaotaAvailable" class="form-control" ng-model="libranza.quaotaAvailable" ng-disabled="true"/>
 				</div>
 				<div class="form-group text-center">
 					<button type="submit" class="btn formularioSimulador-buttonForm">Simular</button>
@@ -152,18 +152,18 @@
 	<div class="modal fade hide" id="simularModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-body">
+				<div class="modal-body simularModal-modalBody">
 					<div class="table">
 						<table class="table table-hover">
-							<thead>
+							<thead class="simularModal-thead">
 								<tr>
-									<td class="col-10">Monto máximo aprobado por plazo</td>
-									<td class="col-2">Plazo</td>
+									<td class="col-sm-8">Monto máximo aprobado por plazo</td>
+									<td class="col-sm-4">Plazo</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr ng-repeat="plazo in plazos">
-									<td>@{{ plazo.amount }}</td>
+									<td>$@{{ plazo.amount | number:0 }}</td>
 									<td>@{{ plazo.timeLimit }}</td>
 								</tr>
 							</tbody>
@@ -181,22 +181,26 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-body">
-					<form role="form">
+					<form role="form" ng-submit="addLead()">
 						<div class="form-group">
 							<label class="control-label">Nombres</label>
-							<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+							<input type="text" ng-model="libranza.name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Apellidos</label>
-							<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+							<input type="text" ng-model="libranza.lastName" class="form-control" id="nameForm" placeholder="Ingrese nombre">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Correo electronico</label>
-							<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+							<input type="email" ng-model="libranza.email" class="form-control" id="nameForm" placeholder="Ingrese nombre">
 						</div>
 						<div class="form-group">
 							<label class="control-label">Teléfono</label>
-							<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+							<input type="tel" ng-model="libranza.telephone" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Ciudad</label>
+							<input type="tel" ng-model="libranza.city" class="form-control" id="nameForm" placeholder="Ingrese nombre">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary">
