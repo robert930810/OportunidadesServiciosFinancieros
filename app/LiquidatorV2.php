@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Liquidator extends Model
+class LiquidatorV2 extends Model
 {
     protected $table = 'liquidator';
 

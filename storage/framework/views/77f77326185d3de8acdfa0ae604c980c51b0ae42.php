@@ -85,23 +85,23 @@
 					<input type="text" id="salary" class="form-control" ng-model="libranza.salary" ng-blur="calculateData()">
 				</div>
 				<div class="form-group">
-					<label for="descuentosLey" class="formularioSimulador-labelFormulario">Descuentos de ley :</label>
-					<input type="text" id="descuentosLey" class="form-control" ng-model="libranza.descuentosLey" ng-disabled="true">
+					<label for="lawDesc" class="formularioSimulador-labelFormulario">Descuentos de ley :</label>
+					<input type="text" id="lawDesc" class="form-control" ng-model="libranza.lawDesc" ng-disabled="true">
 				</div>
 				<div class="form-group">
-					<label for="otrosDescuentos" class="formularioSimulador-labelFormulario">Otros Descuentos :</label>
-					<input type="text" id="otrosDescuentos" class="form-control" ng-model="libranza.otrosDescuentos" ng-blur="calculateData()" >
+					<label for="otherDesc" class="formularioSimulador-labelFormulario">Otros Descuentos :</label>
+					<input type="text" id="otherDesc" class="form-control" ng-model="libranza.otherDesc" ng-blur="calculateData()" >
 				</div>
 				<div class="form-group">
-					<input type="hidden" id="margenSeguridad" class="form-control" ng-model="libranza.margenSeguridad">
+					<input type="hidden" id="segMargen" class="form-control" ng-model="libranza.segMargen">
 				</div>
 				<div class="form-group" ng-if="libranza.lineaCredito == 'Libre inversion + Compra de cartera'">
-					<label for="coutaCompra" class="formularioSimulador-labelFormulario">Valor Cuota Compra :</label>
-					<input type="text" id="coutaCompra" class="form-control" ng-model="libranza.coutaCompra" ng-blur="calculateData()" />
+					<label for="quotaBuy" class="formularioSimulador-labelFormulario">Valor Cuota Compra :</label>
+					<input type="text" id="quotaBuy" class="form-control" ng-model="libranza.quotaBuy" ng-blur="calculateData()" />
 				</div>
 				<div class="form-group">
-					<label for="cupoDisponible" class="formularioSimulador-labelFormulario">Cupo disponible :</label>
-					<input type="text" id="cupoDisponible" class="form-control" ng-model="libranza.cupoDisponible" ng-disabled="true"/>
+					<label for="quaotaAvailable" class="formularioSimulador-labelFormulario">Cupo disponible :</label>
+					<input type="text" id="quaotaAvailable" class="form-control" ng-model="libranza.quaotaAvailable" ng-disabled="true"/>
 				</div>
 				<div class="form-group text-center">
 					<button type="submit" class="btn formularioSimulador-buttonForm">Simular</button>

@@ -3,8 +3,7 @@
     <head>
         <title>Oportunidades Servicios Financieros - <?php echo $__env->yieldContent('title'); ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo e(asset('css/app.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/app2.css')); ?>">
@@ -16,6 +15,9 @@
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link href="<?php echo e(asset('editor/contentbuilder/contentbuilder.css')); ?>" rel="stylesheet" type="text/css" /> 
    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <script type="text/javascript" src="<?php echo e(asset('js/script.js')); ?>"></script>
+    </head>
+   
 
 
 
@@ -45,14 +47,15 @@
 
         <div id="header">
             <div class="row resetRow">
-                <div class="col-12 col-sm-6 resetCol">
+                <div class="col-12 col-sm-12 col-lg-6 resetCol headerImage">
                     <div class="header-containerLogo">
                         <a href="/">
                         <img src="<?php echo e(asset('images/opottunidadesServiciosFinancierosLogo.png')); ?>" title="Oportunidades Servicios Financieros" class="img-fluid">
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 resetCol">
+                <div class="col-12 col-sm-12 col-lg-6 resetCol toggleResponsive">
+                    <div class="prueba">
                     <nav class="navbar header-menu navbar-expand-lg navbar-light">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -67,6 +70,7 @@
                             </div>
                         </div>
                     </nav>
+                    </div>
                 </div>
             </div>
         </div>

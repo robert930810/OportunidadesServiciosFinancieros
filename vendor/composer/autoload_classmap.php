@@ -32,6 +32,7 @@ return array(
     'App\\Http\\Middleware\\clearViewCache' => $baseDir . '/app/Http/Middleware/clearViewCache.php',
     'App\\Imagenes' => $baseDir . '/app/Imagenes.php',
     'App\\Lead' => $baseDir . '/app/Lead.php',
+    'App\\Liquidator' => $baseDir . '/app/Liquidator.php',
     'App\\Oportuya' => $baseDir . '/app/Oportuya.php',
     'App\\Page' => $baseDir . '/app/Page.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

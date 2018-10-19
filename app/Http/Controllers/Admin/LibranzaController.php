@@ -57,7 +57,7 @@ class LibranzaController extends Controller
         $liquidator->age = $request->get('age');
         $liquidator->customerType = $request->get('customerType');
         $liquidator->salary = $request->get('salary');
-        $liquidator->idLead = 13;
+        $liquidator->idLead = 18;
         $liquidator->save();
     }
 
