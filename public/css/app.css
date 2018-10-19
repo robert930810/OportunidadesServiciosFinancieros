@@ -1236,9 +1236,9 @@ a:hover, a:active, a:focus, a:visited{
 
 	.buttonResponsive{
 		display: block;
-		position: relative;
-		 min-height: 30px;
-   		 max-width: 50px;
+		position: absolute;
+    	right: 80px;
+    	top: -45px;
 
 	}
 
