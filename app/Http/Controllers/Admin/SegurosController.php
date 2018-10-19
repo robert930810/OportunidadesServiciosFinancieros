@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Imagenes;
+use App\Lead;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -37,7 +38,20 @@ class SegurosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $lead= new Lead;
+
+        $lead->name=$request->get('name');
+        $lead->lastName=$request->get('lastName');
+        $lead->email=$request->get('email');
+        $lead->telephone=$request->get('telephone');
+        $lead->city=$request->get('city');
+        $lead->typeService=$request->get('typeService');
+        $lead->typeProduct=$request->get('typeProduct');
+
+
+        $lead->save();
+
+        return redirect()->route('thankYouPageSeguros');
     }
 
     /**

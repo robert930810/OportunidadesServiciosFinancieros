@@ -32,6 +32,10 @@ Route::get('/OP_gracias_FRM',function(){
 	return view('oportuya.thankYouPage');
 })->name('thankYouPageOportuya');
 
+Route::get('/SG_gracias_FRM',function(){
+	return view('seguros.thankYouPage');
+})->name('thankYouPageSeguros');
+
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
