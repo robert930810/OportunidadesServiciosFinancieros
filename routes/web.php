@@ -58,6 +58,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('pages','Admin\PageController');
 Route::resource('oportuya','Admin\OportuyaController');
 Route::resource('libranza','Admin\LibranzaController');
+Route::resource('motos','Admin\MotosController');
 
 
 Route::get('api/libranza/test/{precio1}', 'Admin\LibranzaController@test');

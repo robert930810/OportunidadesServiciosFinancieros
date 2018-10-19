@@ -112,11 +112,7 @@
 				</div>
 			</form>
 			<p class="formularioSimulador-textInferior text-center">
-				También, puedes comunicarte con Tu Línea Libranza al 353 50 67 en Bogotá o 01 8000 42 5828 (opción 2) a Nivel Nacional. <br>
-				“El cálculo que se presenta es aproximado e informativo y puede presentar variación. No constituye asesoría contable ni tributaria. <br>
-				Para obtener información y cálculo acerca del Valor Total Unificado (VTU) por favor remítase a su oficina más cercana. <br>
-				(*) Campos obligatorios requeridos para continuar con la simulación y solicitud. <br>
-				Para más información visite los términos y condiciones”
+				El cupo y cuota del crédito ,producto de esta simulación, son aproximados e informativos y podrán variar de acuerdo a las políticas de financiación y de crédito vigentes al momento de su estudio y aprobación por parte de Lagobo.
 			</p>
 		</div>
 	</div>

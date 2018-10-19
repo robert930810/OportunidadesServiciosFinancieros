@@ -53,12 +53,30 @@
                         </a>
                     </div>
                 </div>
+                
+
                 <div class="col-12 col-sm-12 col-lg-6 resetCol toggleResponsive">
-                    <div class="prueba">
-                    <nav class="navbar header-menu navbar-expand-lg navbar-light">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                    
+                    <div class="buttonResponsive">
+                        <div class="innerButtonResponsive"></div>
+                        <div class="innerButtonResponsive1"></div>
+                        <div class="innerButtonResponsive2"></div>
+                    </div>
+
+                    <div class="   header-containerItemsResponsive header-item1" id="navbarNavAltMarkup">
+                        <div class="navbar-nav header-menu">
+                            <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Crédito motos</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="/libranza"> <span class="header-textoItem">Crédito libranza</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Seguros</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Viajes</span></a>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <nav class="navbar header-menu navbar-expand-lg navbar-light navBarHide">
+                    
                         <div class="collapse navbar-collapse header-containerItems" id="navbarNavAltMarkup">
                             <div class="navbar-nav header-menu">
                                 <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
@@ -69,8 +87,10 @@
                             </div>
                         </div>
                     </nav>
-                    </div>
+                   
                 </div>
+                   
+                     
             </div>
         </div>
         <div id="container">

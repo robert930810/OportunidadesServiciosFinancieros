@@ -53,6 +53,10 @@ a:hover, a:active, a:focus, a:visited{
 	height: 100%;
 }
 
+.buttonResponsive{
+	display: none;
+}
+
 .header-containerLogo{
 	background: #f5f4fe;
 	padding: 5px 0 5px 30px;
@@ -79,6 +83,14 @@ a:hover, a:active, a:focus, a:visited{
 	top: 50%;
 	transform: translate(-50%,-50%);
 	width: 100%;
+}
+
+.header-containerItemsResponsive{
+	display: none;
+}
+
+.no_scroll{
+    overflow:hidden;
 }
 
 .header-item1{
@@ -1220,6 +1232,49 @@ a:hover, a:active, a:focus, a:visited{
 		width: 100%;
 	}
 
+	
+
+	.buttonResponsive{
+		display: block;
+		position: relative;
+		 min-height: 30px;
+   		 max-width: 50px;
+
+	}
+
+	.innerButtonResponsive, .innerButtonResponsive1, .innerButtonResponsive2 {
+    background-color: #1CABE2;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    content:" 	";
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: transform,opacity;
+	}
+	.innerButtonResponsive1 {
+    top: 10px;
+	}
+	.innerButtonResponsive2 {
+    top: 20px;
+    }
+
+
+    .buttonResponsive.open .innerButtonResponsive {
+    transform: translate3d(0,10px,0) rotate(45deg);
+	}
+	.buttonResponsive.open .innerButtonResponsive1{
+    transform: translate3d(0,0px,0) rotate(-45deg);
+	}
+	.buttonResponsive.open .innerButtonResponsive2 {
+    transform: translate3d(0,-10px,0) rotate(135deg);
+	}
+
+	.headerImage{
+		z-index: -1;
+	}
+
 }
 
 
@@ -1301,6 +1356,31 @@ a:hover, a:active, a:focus, a:visited{
 
 	.offersPrice2{
 		transform: translate(-16em,1.5em);
+	}
+
+	.navBarHide{
+		display: none;
+	}
+
+	.header-item{
+		height: 10%;
+		position: relative;
+	}
+
+	.header-item::after{
+		position: absolute;
+		content: " ";
+		width: 100%;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+		height: 2px;
+		background-color:rgba(255,255,255,0.2);
+
+	}
+
+	.header-textoItem{
+		font-size: 15px;
 	}
 }
 
