@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Tarjeta de Crédito Oportuya')
+
 @section('content')
 	
 <!-- Slider Section Oportuya Page -->
@@ -78,9 +80,9 @@
 			<div class="row contentCards">
 				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards beforeLine">
 					<img src="{{ asset('images/tarjetaGray.png') }}" class="img-fluid">
-					<p class="titleContentCard">
+					<h1 class="titleContentCard">
 						<span>Tarjeta de crédito gray<i class="fa fa-check-square-o checkIcon"></i></span>  
-					</p>
+					</h1>
 					<p class="descriptionContentCard">
 						Con tu tarjeta oportuya tienes avance de efectivo hasta $500.000
 					</p>
@@ -90,9 +92,9 @@
 				</div>
 				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards beforeLine">
 					<img src="{{ asset('images/tarjetaBlue.png') }}" class="img-fluid">
-					<p class="titleContentCard">
+					<h1 class="titleContentCard">
 						<span>Tarjeta de crédito Blue<i class="fa fa-check-square-o checkIcon"></i></span>  
-					</p>
+					</h1>
 					<p class="descriptionContentCard">
 						¿Aún no la tienes? ¡Pidela ya!
 					</p>
@@ -102,9 +104,9 @@
 				</div>
 				<div class="col-lg-4 col-md-12 col-xs-12 col-sm-12 contentCreditcards">
 					<img src="{{ asset('images/tarjetaBlack.png') }}" class="img-fluid">
-					<p class="titleContentCard">
+					<h1 class="titleContentCard">
 						<span>Tarjeta de crédito Black<i class="fa fa-check-square-o checkIcon"></i></span>  
-					</p>
+					</h1>
 					<p class="descriptionContentCard">
 						Ofertas especiales permanentes
 					</p>

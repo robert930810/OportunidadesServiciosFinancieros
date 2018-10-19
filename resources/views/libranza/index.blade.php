@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Crédito Libranza')
+
 @section('content')
 <div ng-app="appLibranzaLiquidador" ng-controller="libranzaLiquidadorCtrl">
 	<div id="sliderPrincipalLibranza">
@@ -97,7 +99,7 @@
 				<div class="form-group">
 					<input type="hidden" id="segMargen" class="form-control" ng-model="libranza.segMargen">
 				</div>
-				<div class="form-group" ng-if="libranza.lineaCredito == 'Libre inversion + Compra de cartera'">
+				<div class="form-group" ng-if="libranza.creditLine == 'Libre inversion + Compra de cartera'">
 					<label for="quotaBuy" class="formularioSimulador-labelFormulario">Valor Cuota Compra :</label>
 					<input type="text" id="quotaBuy" class="form-control" ng-model="libranza.quotaBuy" ng-blur="calculateData()" />
 				</div>
