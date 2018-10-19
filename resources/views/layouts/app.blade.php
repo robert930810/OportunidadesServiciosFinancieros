@@ -66,10 +66,10 @@
                     <div class="   header-containerItemsResponsive header-item1" id="navbarNavAltMarkup">
                         <div class="navbar-nav header-menu">
                             <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
-                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Crédito motos</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="/motos"> <span class="header-textoItem">Crédito motos</span></a>
                             <a class="nav-item nav-link header-item header-item1" href="/libranza"> <span class="header-textoItem">Crédito libranza</span></a>
-                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Seguros</span></a>
-                            <a class="nav-item nav-link header-item header-item1" href="#"> <span class="header-textoItem">Viajes</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="/seguros"> <span class="header-textoItem">Seguros</span></a>
+                            <a class="nav-item nav-link header-item header-item1" href="/viajes"> <span class="header-textoItem">Viajes</span></a>
                         </div>
                     </div>
 
@@ -80,10 +80,10 @@
                         <div class="collapse navbar-collapse header-containerItems" id="navbarNavAltMarkup">
                             <div class="navbar-nav header-menu">
                                 <a class="nav-item nav-link header-item header-item1" href="/oportuya"> <span class="header-textoItem">Oportuya</span></a>
-                                <a class="nav-item nav-link header-item header-item2" href="#"> <span class="header-textoItem">Crédito motos</span></a>
+                                <a class="nav-item nav-link header-item header-item2" href="/motos"> <span class="header-textoItem">Crédito motos</span></a>
                                 <a class="nav-item nav-link header-item header-item3" href="/libranza"> <span class="header-textoItem">Crédito libranza</span></a>
-                                <a class="nav-item nav-link header-item header-item4" href="#"> <span class="header-textoItem">Seguros</span></a>
-                                <a class="nav-item nav-link header-item header-item5" href="#"> <span class="header-textoItem">Viajes</span></a>
+                                <a class="nav-item nav-link header-item header-item4" href="/seguros"> <span class="header-textoItem">Seguros</span></a>
+                                <a class="nav-item nav-link header-item header-item5" href="/viajes"> <span class="header-textoItem">Viajes</span></a>
                             </div>
                         </div>
                     </nav>
