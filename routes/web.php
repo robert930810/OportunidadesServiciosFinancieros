@@ -24,6 +24,14 @@ Route::get('/', function () {
     		->with('sliderPrincipal', $sliders->all());
 });
 
+Route::get('/LIB_gracias_FRM', function(){
+	return view('libranza.thankYouPage');
+});
+
+Route::get('/OP_gracias_FRM',function(){
+	return view('oportuya.thankYouPage');
+})->name('thankYouPageOportuya');
+
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');

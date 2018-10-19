@@ -33,6 +33,7 @@ return array(
     'App\\Imagenes' => $baseDir . '/app/Imagenes.php',
     'App\\Lead' => $baseDir . '/app/Lead.php',
     'App\\Liquidator' => $baseDir . '/app/Liquidator.php',
+    'App\\LiquidatorV2' => $baseDir . '/app/LiquidatorV2.php',
     'App\\Oportuya' => $baseDir . '/app/Oportuya.php',
     'App\\Page' => $baseDir . '/app/Page.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

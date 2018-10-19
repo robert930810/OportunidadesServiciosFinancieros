@@ -367,6 +367,7 @@ class ComposerStaticInitb1df8ea801be26af3f882e1d1a0f95a3
         'App\\Imagenes' => __DIR__ . '/../..' . '/app/Imagenes.php',
         'App\\Lead' => __DIR__ . '/../..' . '/app/Lead.php',
         'App\\Liquidator' => __DIR__ . '/../..' . '/app/Liquidator.php',
+        'App\\LiquidatorV2' => __DIR__ . '/../..' . '/app/LiquidatorV2.php',
         'App\\Oportuya' => __DIR__ . '/../..' . '/app/Oportuya.php',
         'App\\Page' => __DIR__ . '/../..' . '/app/Page.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

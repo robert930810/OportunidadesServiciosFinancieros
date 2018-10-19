@@ -125,28 +125,33 @@
 		<div class="modal-content">
 			
 			<div class="modal-header">
-				<h4>tarjeta de crédito Gray</h4>
+				<h4>Tarjeta Oportuya Gray</h4>
 			</div>
 
 			<div class="modal-body">
 				
-				<form role=form method="POST" action="">
-					<input type="hidden" name="tipoTarjeta" value="gray">
+				<form role=form method="POST" action="{{ route('oportuya.store') }}">
+					{{ csrf_field() }}
+					<input type="hidden" name="typeProduct" value="Gray">
 					<div class="form-group">
-						<label class="control-label">Nombres</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="name" class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="name" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Apellidos</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="lastName" class="control-label">Apellidos</label>
+						<input type="text" name="lastName" class="form-control" id="lastName" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Correo electronico</label>
-						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="email" class="control-label">Correo electronico</label>
+						<input type="email" name="email" class="form-control" id="email" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Teléfono</label>
-						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="telephone class="control-label">Teléfono</label>
+						<input type="tel" name="telephone" class="form-control" id="telephone" />
+					</div>
+					<div class="form-group">
+						<label for="ciudad class="control-label">Ciudad</label>
+						<input type="text" name="city" class="form-control" id="ciudad" />
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">
@@ -176,28 +181,33 @@
 		<div class="modal-content">
 			
 			<div class="modal-header">
-				<h4>tarjeta de crédito Gray</h4>
+				<h4>Tarjeta Oportuya Blue</h4>
 			</div>
 
 			<div class="modal-body">
 				
-				<form role=form method="POST" action="">
-					<input type="hidden" name="tipoTarjeta" value="blue">
+				<form role=form method="POST" action="{{ route('oportuya.store') }}">
+					{{ csrf_field() }}
+					<input type="hidden" name="typeProduct" value="Blue">
 					<div class="form-group">
-						<label class="control-label">Nombres</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="name" class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="name" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Apellidos</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="lastName" class="control-label">Apellidos</label>
+						<input type="text" name="lastName" class="form-control" id="lastName" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Correo electronico</label>
-						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="email" class="control-label">Correo electronico</label>
+						<input type="email" name="email" class="form-control" id="email" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Teléfono</label>
-						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="telephone class="control-label">Teléfono</label>
+						<input type="tel" name="telephone" class="form-control" id="telephone" />
+					</div>
+					<div class="form-group">
+						<label for="ciudad class="control-label">Ciudad</label>
+						<input type="text" name="city" class="form-control" id="ciudad" />
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">
@@ -226,28 +236,33 @@
 		<div class="modal-content">
 			
 			<div class="modal-header">
-				<h4>tarjeta de crédito Gray</h4>
+				<h4>Tarjeta Oportuya Black</h4>
 			</div>
 
 			<div class="modal-body">
 				
-				<form role=form method="POST" action="">
-					<input type="hidden" name="tipoTarjeta" value="black">
+				<form role=form method="POST" action="{{ route('oportuya.store') }}">
+					{{ csrf_field() }}
+					<input type="hidden" name="typeProduct" value="Black">
 					<div class="form-group">
-						<label class="control-label">Nombres</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="name" class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="name" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Apellidos</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="lastName" class="control-label">Apellidos</label>
+						<input type="text" name="lastName" class="form-control" id="lastName" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Correo electronico</label>
-						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="email" class="control-label">Correo electronico</label>
+						<input type="email" name="email" class="form-control" id="email" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Teléfono</label>
-						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="telephone class="control-label">Teléfono</label>
+						<input type="tel" name="telephone" class="form-control" id="telephone" />
+					</div>
+					<div class="form-group">
+						<label for="ciudad class="control-label">Ciudad</label>
+						<input type="text" name="city" class="form-control" id="ciudad" />
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">
@@ -312,27 +327,33 @@
 		<div class="modal-content">
 			
 			<div class="modal-header">
-				<h4>tarjeta de crédito Gray</h4>
+				<h4>Tarjeta Oportuya Gray</h4>
 			</div>
 
 			<div class="modal-body">
 				
-				<form role=form method="POST" action="">
+				<form role=form method="POST" action="{{ route('oportuya.store') }}">
+					{{ csrf_field() }}
+					<input type="hidden" name="typeProduct" value="Gray">
 					<div class="form-group">
-						<label class="control-label">Nombres</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="name" class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="name" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Apellidos</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="lastName" class="control-label">Apellidos</label>
+						<input type="text" name="lastName" class="form-control" id="lastName" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Correo electronico</label>
-						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="email" class="control-label">Correo electronico</label>
+						<input type="email" name="email" class="form-control" id="email" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Teléfono</label>
-						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="telephone class="control-label">Teléfono</label>
+						<input type="tel" name="telephone" class="form-control" id="telephone" />
+					</div>
+					<div class="form-group">
+						<label for="ciudad class="control-label">Ciudad</label>
+						<input type="text" name="city" class="form-control" id="ciudad" />
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">
@@ -517,27 +538,33 @@
 		<div class="modal-content">
 			
 			<div class="modal-header">
-				<h4>tarjeta de crédito Gray</h4>
+				<h4>Tarjeta Oportuya Gray</h4>
 			</div>
 
 			<div class="modal-body">
 				
-				<form role=form method="POST" action="">
+				<form role=form method="POST" action="{{ route('oportuya.store') }}">
+					{{ csrf_field() }}
+					<input type="hidden" name="typeProduct" value="Gray">
 					<div class="form-group">
-						<label class="control-label">Nombres</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="name" class="control-label">Nombres</label>
+						<input type="text" name="name" class="form-control" id="name" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Apellidos</label>
-						<input type="text" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="lastName" class="control-label">Apellidos</label>
+						<input type="text" name="lastName" class="form-control" id="lastName" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Correo electronico</label>
-						<input type="email" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="email" class="control-label">Correo electronico</label>
+						<input type="email" name="email" class="form-control" id="email" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">Teléfono</label>
-						<input type="tel" name="name" class="form-control" id="nameForm" placeholder="Ingrese nombre">
+						<label for="telephone class="control-label">Teléfono</label>
+						<input type="tel" name="telephone" class="form-control" id="telephone" />
+					</div>
+					<div class="form-group">
+						<label for="ciudad class="control-label">Ciudad</label>
+						<input type="text" name="city" class="form-control" id="ciudad" />
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">

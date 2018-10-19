@@ -143,7 +143,7 @@ angular.module('appLibranzaLiquidador', [])
 		  url: '/libranza',
 		  data: $scope.libranza
 		}).then(function successCallback(response) {
-			console.log(response.data);
+			window.location = "/LIB_gracias_FRM";
 		}, function errorCallback(response) {
 		    
 		});
