@@ -12,7 +12,7 @@
 						@php
 							echo $slider['texto'];
 						@endphp
-						<a href="#" class="sliderPrincipal-button" style="background: {{$slider['color']}}">{{ $slider['textoBoton'] }}</a>
+						<a href="{{ $slider['enlace'] }}" class="sliderPrincipal-button" style="background: {{$slider['color']}}">{{ $slider['textoBoton'] }}</a>
 						
 					</div>
 				@else
@@ -20,7 +20,7 @@
 						@php
 							echo $slider['texto'];
 						@endphp
-						<a href="#" class="sliderPrincipal-button" style="background: {{$slider['color']}}">{{ $slider['textoBoton'] }}</a>
+						<a href="{{ $slider['enlace'] }}" class="sliderPrincipal-button" style="background: {{$slider['color']}}">{{ $slider['textoBoton'] }}</a>
 						
 					</div>
 				@endif
@@ -42,7 +42,7 @@
 					</p>
 				</div>
 				<div class="conoce-containButton">
-					<a href="#" class="conoce-button button-oportuya">Conoce más</a>
+					<a href="/oportuya" class="conoce-button button-oportuya">Conoce más</a>
 				</div>
 				<img src="images/conoce-oportuyaImagen.png" alt="Conoce nuestra tarjeta OportuYa" class="img-fluid" />
 			</div>
@@ -57,7 +57,7 @@
 					</p>
 				</div>
 				<div class="conoce-containButton">
-					<a href="#" class="conoce-button button-creditoMotos">Conoce más</a>
+					<a href="/motos" class="conoce-button button-creditoMotos">Conoce más</a>
 				</div>
 				<img src="images/conoce-motoImagen.png" alt="Conoce nuestros créditos para motos" class="img-fluid" />
 			</div>
@@ -71,7 +71,7 @@
 					</p>
 				</div>
 				<div class="conoce-containButton">
-					<a href="#" class="conoce-button button-creditoLibranza">Conoce más</a>
+					<a href="/libranza" class="conoce-button button-creditoLibranza">Conoce más</a>
 				</div>
 				<img src="images/conoce-libranzaImagen.png" alt="Conoce nuestros créditos de libranza" class="img-fluid" />
 			</div>
@@ -87,7 +87,7 @@
 					</p>
 				</div>
 				<div class="conoce-containButton">
-					<a href="#" class="conoce-button button-seguros">Conoce más</a>
+					<a href="/seguros" class="conoce-button button-seguros">Conoce más</a>
 				</div>
 				<img src="images/conoce-segurosImagen.png" alt="Conoce nuestro servicio de seguros" class="img-fluid" />
 			</div>
@@ -103,7 +103,7 @@
 					</p>
 				</div>
 				<div class="conoce-containButton">
-					<a href="#" class="conoce-button button-viajes">Conoce más</a>
+					<a href="/viajes" class="conoce-button button-viajes">Conoce más</a>
 				</div>
 				<img src="images/conoce-viajesImagen.png" alt="Conoce nuestro servicio de viajes" class="img-fluid" />
 			</div>
