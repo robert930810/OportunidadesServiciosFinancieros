@@ -144,6 +144,7 @@ a:hover, a:active, a:focus, a:visited{
 	padding: 15px 0 0 10px;
 	position: absolute;
 	right: 0;
+	transform: translate(0,-50%);
 	text-align: center;
 	top: 50%;
 	width: 60px;
@@ -159,6 +160,7 @@ a:hover, a:active, a:focus, a:visited{
 	padding: 15px 10px 0 0;
 	position: absolute;
 	left: 0;
+	transform: translate(0,-50%);
 	text-align: center;
 	top: 50%;
 	width: 60px;
@@ -1275,6 +1277,14 @@ a:hover, a:active, a:focus, a:visited{
 		z-index: -1;
 	}
 
+	.oportuyaSliderTitle{
+		font-size: 0.7em;
+	}
+
+	.oportuyaSliderButton{
+		font-size: 0.7em;
+	}
+
 }
 
 
@@ -1461,6 +1471,22 @@ a:hover, a:active, a:focus, a:visited{
 	.efectiveText{
 		font-size: 1em;
 	}
+
+	.oportuyaSliderContent{
+		    position: relative;
+    bottom: 0;
+    left: 3em;
+    padding-top: 3em;
+    margin-bottom: 3em;
+	}
+
+	.slideNext{
+		top: 20%;
+	}
+
+	.slidePrev{
+		top: 20%;
+	}
 }
 
 @media(max-width: 576px){
@@ -1474,6 +1500,13 @@ a:hover, a:active, a:focus, a:visited{
 
 	.offersPrice2{
 		transform: translate(-1em,1.5em);
+	}
+
+	.buttonResponsive{
+		position: relative;
+		margin-left: 50%;
+		top:unset;
+		right: unset;
 	}
 }
 
