@@ -6,7 +6,7 @@
 			<h2 class="creditoLibranza-title text-center">Esta sección está actualmente en construcción</h2>
 			<p class="text-center">Si te interesa conocer más sobre seguros, déjanos tus datos y un asesor se pondrá en contacto</p>
 			<div class="col-12 col-sm-8 offset-sm-2">
-				<form role=form method="POST" action="<?php echo e(route('oportuya.store')); ?>">
+				<form role=form method="POST" action="<?php echo e(route('seguros.store')); ?>">
 					<?php echo e(csrf_field()); ?>
 
 					<input type="hidden" name="typeProduct" value="Seguros">
