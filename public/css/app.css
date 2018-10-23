@@ -328,6 +328,13 @@ a:hover, a:active, a:focus, a:visited{
 	position: absolute;
 }
 
+.buttonCreditCard:hover{
+	-moz-transform: scale(1.1);
+  	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+  	color: #FFF;
+}
+
 /*requirements section*/
 
 #requirements{
@@ -1392,6 +1399,10 @@ a:hover, a:active, a:focus, a:visited{
 	.header-textoItem{
 		font-size: 15px;
 	}
+
+	.preHeader-item{
+		padding: 5px 23px 0 23px !important
+	}
 }
 
 
@@ -1475,7 +1486,7 @@ a:hover, a:active, a:focus, a:visited{
 	.oportuyaSliderContent{
 		    position: relative;
     bottom: 0;
-    left: 3em;
+    left: unset;
     padding-top: 3em;
     margin-bottom: 3em;
 	}
@@ -1486,6 +1497,11 @@ a:hover, a:active, a:focus, a:visited{
 
 	.slidePrev{
 		top: 20%;
+	}
+
+	.preHeader-item{
+		padding: 5px 15px 0 15px !important;
+		font-size:12px;
 	}
 }
 
